@@ -6,13 +6,11 @@ my [blog post](https://costa.sh/blog-the-32-implementation-details-of-ppo.html),
 github permanent links of the details to the original implementation.
 
 
-### Get started
+## Get started
 
-(Optional) Setup virtual environments:
-```
-pyenv install -s $(sed "s/\/envs.*//" .python-version)
-pyenv virtualenv $(sed "s/\/envs\// /" .python-version)
-```
+Prerequisites:
+* Python 3.8+
+* [Poetry](https://python-poetry.org)
 
 Install dependencies:
 ```
@@ -29,7 +27,7 @@ Train agents with experiment tracking:
 python ppo.py --track --capture-video
 ```
 
-## Atari
+### Atari
 Install dependencies:
 ```
 poetry install -E atari
