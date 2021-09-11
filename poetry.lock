@@ -18,6 +18,18 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "ale-py"
+version = "0.7"
+description = "The Arcade Learning Environment (ALE) - a platform for AI research."
+category = "main"
+optional = true
+python-versions = ">=3.6"
+
+[package.dependencies]
+importlib-resources = "*"
+numpy = "*"
+
+[[package]]
 name = "applaunchservices"
 version = "0.2.1"
 description = "Simple package for registering an app with apple Launch Services to handle UTI and URL"
@@ -60,18 +72,6 @@ lazy-object-proxy = ">=1.4.0"
 wrapt = ">=1.11,<1.13"
 
 [[package]]
-name = "atari-py"
-version = "0.2.6"
-description = "Python bindings to Atari games"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-numpy = "*"
-six = "*"
-
-[[package]]
 name = "atomicwrites"
 version = "1.4.0"
 description = "Atomic file writes."
@@ -104,6 +104,19 @@ python-versions = "*"
 [package.dependencies]
 pycodestyle = ">=2.7.0"
 toml = "*"
+
+[[package]]
+name = "autorom"
+version = "0.3.1"
+description = "Automated installation of Atari ROMs for Gym/ALE-Py"
+category = "main"
+optional = true
+python-versions = ">=3.6"
+
+[package.dependencies]
+click = "*"
+requests = "*"
+tqdm = "*"
 
 [[package]]
 name = "babel"
@@ -250,11 +263,11 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "cloudpickle"
-version = "1.6.0"
+version = "2.0.0"
 description = "Extended pickling support for Python objects"
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.6"
 
 [[package]]
 name = "colorama"
@@ -334,7 +347,7 @@ python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 
 [[package]]
 name = "decorator"
-version = "5.0.9"
+version = "5.1.0"
 description = "Decorators for Humans"
 category = "dev"
 optional = false
@@ -469,25 +482,33 @@ protobuf = ["grpcio-tools (>=1.40.0)"]
 
 [[package]]
 name = "gym"
-version = "0.19.0"
-description = "The OpenAI Gym: A toolkit for developing and comparing your reinforcement learning agents."
+version = "0.20.0"
+description = "Gym: A universal API for reinforcement learning environments."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+develop = false
 
 [package.dependencies]
-cloudpickle = ">=1.2.0,<1.7.0"
+cloudpickle = ">=1.2.0"
 numpy = ">=1.18.0"
 
 [package.extras]
-all = ["atari-py (==0.2.6)", "box2d-py (>=2.3.5,<2.4.0)", "opencv-python (>=3)", "mujoco_py (>=1.50,<2.0)", "scipy", "imageio", "pyglet (>=1.4.0)"]
-atari = ["atari-py (==0.2.6)", "opencv-python (>=3)"]
-box2d = ["box2d-py (>=2.3.5,<2.4.0)", "pyglet (>=1.4.0)"]
+all = ["scipy (>=1.4.1)", "opencv-python (>=3)", "ale-py (>=0.7,<1.0)", "pyglet (>=1.4.0)", "lz4 (>=3.1.0)", "mujoco-py (>=1.50,<2.0)", "box2d-py (==2.3.5)"]
+atari = ["ale-py (>=0.7,<1.0)"]
+box2d = ["box2d-py (==2.3.5)", "pyglet (>=1.4.0)"]
 classic_control = ["pyglet (>=1.4.0)"]
-mujoco = ["mujoco_py (>=1.50,<2.0)", "imageio"]
-nomujoco = ["atari-py (==0.2.6)", "box2d-py (>=2.3.5,<2.4.0)", "opencv-python (>=3)", "scipy", "pyglet (>=1.4.0)"]
-robotics = ["mujoco_py (>=1.50,<2.0)", "imageio"]
-toy_text = ["scipy"]
+mujoco = ["mujoco-py (>=1.50,<2.0)"]
+nomujoco = ["scipy (>=1.4.1)", "opencv-python (>=3)", "ale-py (>=0.7,<1.0)", "pyglet (>=1.4.0)", "lz4 (>=3.1.0)", "box2d-py (==2.3.5)"]
+other = ["lz4 (>=3.1.0)", "opencv-python (>=3)"]
+robotics = ["mujoco-py (>=1.50,<2.0)"]
+toy_text = ["scipy (>=1.4.1)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/openai/gym.git"
+reference = "master"
+resolved_reference = "7f863fd11a878724e544ba9033a2206855650fc3"
 
 [[package]]
 name = "idna"
@@ -520,6 +541,21 @@ zipp = ">=0.5"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 perf = ["ipython"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
+
+[[package]]
+name = "importlib-resources"
+version = "5.2.2"
+description = "Read resources from Python packages"
+category = "main"
+optional = true
+python-versions = ">=3.6"
+
+[package.dependencies]
+zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
+testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [[package]]
 name = "inflection"
@@ -730,7 +766,7 @@ pygments = ">=2.4.1,<3"
 
 [[package]]
 name = "keyring"
-version = "23.1.0"
+version = "23.2.0"
 description = "Store and access your passwords safely."
 category = "dev"
 optional = false
@@ -1176,6 +1212,14 @@ python-versions = "*"
 
 [package.dependencies]
 pyasn1 = ">=0.4.6,<0.5.0"
+
+[[package]]
+name = "pybullet"
+version = "3.1.8"
+description = "Official Python Interface for the Bullet Physics SDK specialized for Robotics Simulation and Reinforcement Learning"
+category = "main"
+optional = true
+python-versions = "*"
 
 [[package]]
 name = "pycodestyle"
@@ -3799,6 +3843,22 @@ optional = false
 python-versions = ">= 3.5"
 
 [[package]]
+name = "tqdm"
+version = "4.62.2"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = true
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+notebook = ["ipywidgets (>=6)"]
+telegram = ["requests"]
+
+[[package]]
 name = "traitlets"
 version = "5.1.0"
 description = "Traitlets Python configuration system"
@@ -3938,7 +3998,7 @@ python-versions = "*"
 name = "zipp"
 version = "3.5.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -3946,10 +4006,14 @@ python-versions = ">=3.6"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
+[extras]
+atari = ["ale-py", "AutoROM"]
+pybullet = ["pybullet"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d7d07d1e96b143116648c9c7e9457174d789c9e62e8621587946f3154a788512"
+content-hash = "f7d012721c388b133e0f96d04f558dfb491cd5b17a1729e89d8ab392670f2f45"
 
 [metadata.files]
 absl-py = [
@@ -3959,6 +4023,22 @@ absl-py = [
 alabaster = [
     {file = "alabaster-0.7.12-py2.py3-none-any.whl", hash = "sha256:446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359"},
     {file = "alabaster-0.7.12.tar.gz", hash = "sha256:a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"},
+]
+ale-py = [
+    {file = "ale_py-0.7-cp36-cp36m-macosx_10_15_x86_64.whl", hash = "sha256:39d4af211d1ac83312af2d4d60cb35d0ef3b60265c96cb6fc6d577fcb6ea193f"},
+    {file = "ale_py-0.7-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e0d6dc89e8232144959dc8ffe5fce4a7a30487ba69b64035afcf89ca8743261a"},
+    {file = "ale_py-0.7-cp36-cp36m-win_amd64.whl", hash = "sha256:9eac4b212f6387067f91247c11cfd75b7491801e5c66c373fc628f9cfa7837bd"},
+    {file = "ale_py-0.7-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:13d0108ca5f40ac2347f45c9af6c70bf3d4652b7854bedd003d989491e2f935f"},
+    {file = "ale_py-0.7-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ecb983ae8e9103801c426a098952f07b76cd1d9b142eed4dc1b7cfbf57f7658a"},
+    {file = "ale_py-0.7-cp37-cp37m-win_amd64.whl", hash = "sha256:3cbd48c266388510324c32342ba39617c5b163477fbbd23a89a22c0ff31005ef"},
+    {file = "ale_py-0.7-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:28b008ea09b05a1b279b17b65ed9b445c6e59420cc340644a42c97f68443123d"},
+    {file = "ale_py-0.7-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:b67292f041f1bbeae2a8ae84dcb1e593022b9414537de0e280ce3c390c0478c6"},
+    {file = "ale_py-0.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:55a9fcec7bb6f45da7350578e9c6642f3ea52f343f52f24452b53721fe8bd17d"},
+    {file = "ale_py-0.7-cp38-cp38-win_amd64.whl", hash = "sha256:e425bdfb1aa563a1e1a542460a00d34a11e02fb7e8c0e26aac4bf80b344d24af"},
+    {file = "ale_py-0.7-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:9dd69275009e02dac05be685a325f7cb9b16d17400e9978527e8604e1f5e5a31"},
+    {file = "ale_py-0.7-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:4e4ddd74afd2fb61fcf0a519a4d80c703a7d00abc64ba1ee2c62bbdef7a349ef"},
+    {file = "ale_py-0.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a120fd98a843f1b6c6fe7f1415e6e5f2efef4fcc50a81bab5c732b9fc958f84f"},
+    {file = "ale_py-0.7-cp39-cp39-win_amd64.whl", hash = "sha256:d398cb0733ca6a4f4b95d924a31d73b61c5db173cde7b2a09665f2c555893692"},
 ]
 applaunchservices = [
     {file = "applaunchservices-0.2.1-py3-none-any.whl", hash = "sha256:a3f942e3063f7e80beec06cc9d5a2b2b3a223484def7f9eb5c6da20a0cbc5b72"},
@@ -3976,17 +4056,6 @@ astroid = [
     {file = "astroid-2.6.6-py3-none-any.whl", hash = "sha256:ab7f36e8a78b8e54a62028ba6beef7561db4cdb6f2a5009ecc44a6f42b5697ef"},
     {file = "astroid-2.6.6.tar.gz", hash = "sha256:3975a0bd5373bdce166e60c851cfcbaf21ee96de80ec518c1f4cb3e94c3fb334"},
 ]
-atari-py = [
-    {file = "atari-py-0.2.6.tar.gz", hash = "sha256:6249ad5079b0489e87eb44e65485bb1b07cc1b5af729f1ee52ece749503ceb1d"},
-    {file = "atari_py-0.2.6-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:3cd3f506a4cac680908501def3d3b79ab2b705993d7cbaead35468b26f2c585b"},
-    {file = "atari_py-0.2.6-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:5a621d623e1619fe2d8607ed4ceaf0bafbae54fea42c3bf3e1522410893ef933"},
-    {file = "atari_py-0.2.6-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:ae2f07e0a5de22d465fef8313b3ecfa1fec7f36e17b5204819e855413e6214de"},
-    {file = "atari_py-0.2.6-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:f6c3ae01f7a2bb331236383fbd47046a40a9fa3bf48e31dc96bbc75c107749b7"},
-    {file = "atari_py-0.2.6-cp36-cp36m-win_amd64.whl", hash = "sha256:64059ae02ac9d90cc43654c748c30d2ef69dd57b0d9e4b59039a420d688814a2"},
-    {file = "atari_py-0.2.6-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:b04033186cd9c7764108627ecd38a5c9be14546b46875b90c6bb5d66451d28c1"},
-    {file = "atari_py-0.2.6-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:d9e2c25d39783867c2f29d1dd9d3a659fc56036456d07dc9efe8bd7bb31a07d7"},
-    {file = "atari_py-0.2.6-cp37-cp37m-win_amd64.whl", hash = "sha256:ac3315c7a1d6cfb09f043e7971598cb53a749393b150614986a0eab28b049aea"},
-]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
     {file = "atomicwrites-1.4.0.tar.gz", hash = "sha256:ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"},
@@ -3998,6 +4067,9 @@ attrs = [
 autopep8 = [
     {file = "autopep8-1.5.7-py2.py3-none-any.whl", hash = "sha256:aa213493c30dcdac99537249ee65b24af0b2c29f2e83cd8b3f68760441ed0db9"},
     {file = "autopep8-1.5.7.tar.gz", hash = "sha256:276ced7e9e3cb22e5d7c14748384a5cf5d9002257c0ed50c0e075b68011bb6d0"},
+]
+autorom = [
+    {file = "AutoROM-0.3.1.tar.gz", hash = "sha256:a4b1d7f0aa81e7a3c262d2af5b97be97c2002368b159d0193236c298c94bd8a3"},
 ]
 babel = [
     {file = "Babel-2.9.1-py2.py3-none-any.whl", hash = "sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"},
@@ -4096,8 +4168,8 @@ click = [
     {file = "click-8.0.1.tar.gz", hash = "sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"},
 ]
 cloudpickle = [
-    {file = "cloudpickle-1.6.0-py3-none-any.whl", hash = "sha256:3a32d0eb0bc6f4d0c57fbc4f3e3780f7a81e6fee0fa935072884d58ae8e1cc7c"},
-    {file = "cloudpickle-1.6.0.tar.gz", hash = "sha256:9bc994f9e9447593bd0a45371f0e7ac7333710fcf64a4eb9834bf149f4ef2f32"},
+    {file = "cloudpickle-2.0.0-py3-none-any.whl", hash = "sha256:6b2df9741d06f43839a3275c4e6632f7df6487a1f181f5f46a052d3c917c3d11"},
+    {file = "cloudpickle-2.0.0.tar.gz", hash = "sha256:5cd02f3b417a783ba84a4ec3e290ff7929009fe51f6405423cfccfadd43ba4a4"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
@@ -4155,8 +4227,8 @@ debugpy = [
     {file = "debugpy-1.4.3.zip", hash = "sha256:4d53fe5aecf03ba466aa7fa7474c2b2fe28b2a6c0d36688d1e29382bfe88dd5f"},
 ]
 decorator = [
-    {file = "decorator-5.0.9-py3-none-any.whl", hash = "sha256:6e5c199c16f7a9f0e3a61a4a54b3d27e7dad0dbdde92b944426cb20914376323"},
-    {file = "decorator-5.0.9.tar.gz", hash = "sha256:72ecfba4320a893c53f9706bebb2d55c270c1e51a28789361aa93e4a21319ed5"},
+    {file = "decorator-5.1.0-py3-none-any.whl", hash = "sha256:7b12e7c3c6ab203a29e157335e9122cb03de9ab7264b137594103fd4a683b374"},
+    {file = "decorator-5.1.0.tar.gz", hash = "sha256:e59913af105b9860aa2c8d3272d9de5a56a4e608db9a2f167a8480b323d529a7"},
 ]
 defusedxml = [
     {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
@@ -4244,9 +4316,7 @@ grpcio = [
     {file = "grpcio-1.40.0-cp39-cp39-win_amd64.whl", hash = "sha256:005fe14e67291498989da67d454d805be31d57a988af28ed3a2a0a7cabb05c53"},
     {file = "grpcio-1.40.0.tar.gz", hash = "sha256:3d172158fe886a2604db1b6e17c2de2ab465fe0fe36aba2ec810ca8441cefe3a"},
 ]
-gym = [
-    {file = "gym-0.19.0.tar.gz", hash = "sha256:940069b983806e1ccc400fa6d47b4e34e462accf6a4fb0acb0a5e509ad0f502d"},
-]
+gym = []
 idna = [
     {file = "idna-3.2-py3-none-any.whl", hash = "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a"},
     {file = "idna-3.2.tar.gz", hash = "sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"},
@@ -4258,6 +4328,10 @@ imagesize = [
 importlib-metadata = [
     {file = "importlib_metadata-4.8.1-py3-none-any.whl", hash = "sha256:b618b6d2d5ffa2f16add5697cf57a46c76a56229b0ed1c438322e4e95645bd15"},
     {file = "importlib_metadata-4.8.1.tar.gz", hash = "sha256:f284b3e11256ad1e5d03ab86bb2ccd6f5339688ff17a4d797a0fe7df326f23b1"},
+]
+importlib-resources = [
+    {file = "importlib_resources-5.2.2-py3-none-any.whl", hash = "sha256:2480d8e07d1890056cb53c96e3de44fead9c62f2ba949b0f2e4c4345f4afa977"},
+    {file = "importlib_resources-5.2.2.tar.gz", hash = "sha256:a65882a4d0fe5fbf702273456ba2ce74fe44892c25e42e057aca526b702a6d4b"},
 ]
 inflection = [
     {file = "inflection-0.5.1-py2.py3-none-any.whl", hash = "sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2"},
@@ -4315,8 +4389,8 @@ jupyterlab-pygments = [
     {file = "jupyterlab_pygments-0.1.2.tar.gz", hash = "sha256:cfcda0873626150932f438eccf0f8bf22bfa92345b814890ab360d666b254146"},
 ]
 keyring = [
-    {file = "keyring-23.1.0-py3-none-any.whl", hash = "sha256:b32397fd7e7063f8dd74a26db910c9862fc2109285fa16e3b5208bcb42a3e579"},
-    {file = "keyring-23.1.0.tar.gz", hash = "sha256:b7e0156667f5dcc73c1f63a518005cd18a4eb23fe77321194fefcc03748b21a4"},
+    {file = "keyring-23.2.0-py3-none-any.whl", hash = "sha256:66a08700421ed0aaf317c6bf6543f7345f9ab9e7bed6e0ee072f7f6fcddbab75"},
+    {file = "keyring-23.2.0.tar.gz", hash = "sha256:1e1970dcecde00c59ff6033d69cee3b283cd0d7cbad78b0dc4cdd15c8a28bcf8"},
 ]
 kiwisolver = [
     {file = "kiwisolver-1.3.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1d819553730d3c2724582124aee8a03c846ec4362ded1034c16fb3ef309264e6"},
@@ -4768,6 +4842,16 @@ pyasn1-modules = [
     {file = "pyasn1_modules-0.2.8-py3.5.egg", hash = "sha256:426edb7a5e8879f1ec54a1864f16b882c2837bfd06eee62f2c982315ee2473ed"},
     {file = "pyasn1_modules-0.2.8-py3.6.egg", hash = "sha256:cbac4bc38d117f2a49aeedec4407d23e8866ea4ac27ff2cf7fb3e5b570df19e0"},
     {file = "pyasn1_modules-0.2.8-py3.7.egg", hash = "sha256:c29a5e5cc7a3f05926aff34e097e84f8589cd790ce0ed41b67aed6857b26aafd"},
+]
+pybullet = [
+    {file = "pybullet-3.1.8-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:53e7ca296a9efecb33ee80be29a28a49508bfaea6624c2dd26c670d76b0bd7fb"},
+    {file = "pybullet-3.1.8-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:b70d560786a94bada2537f3d55a7820855d1fa3caea8de023d88f03c97d40539"},
+    {file = "pybullet-3.1.8-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:bc3c4873d12ec9acbf46a47fac8339c0be7ce6b32ee22a5b209eda18d2dfd08e"},
+    {file = "pybullet-3.1.8-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:0ae9bef2f8ea6b30ee0f8fbc7051801d9b47e82ec8637a47e47a0675d4f03fa4"},
+    {file = "pybullet-3.1.8-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:d47ca592b2621fd05e2c234f15858293e6a53bb04cbd29df5c06d5ca7ef2c6e5"},
+    {file = "pybullet-3.1.8-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:2f4741953b56917231a44ff5767e2b5bb2e8bb2cb1ea6488f555f6754ef90751"},
+    {file = "pybullet-3.1.8-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:df0ccb74e8e307506fd6cc57e5ad7b2c3b7d23ec2a7c8fa16c02fae863ded904"},
+    {file = "pybullet-3.1.8.tar.gz", hash = "sha256:a7e6c7c77cab39e1559c98e4290c5138247b15d3a26a76a23b2737c159f3f905"},
 ]
 pycodestyle = [
     {file = "pycodestyle-2.7.0-py2.py3-none-any.whl", hash = "sha256:514f76d918fcc0b55c6680472f0a37970994e07bbb80725808c17089be302068"},
@@ -5914,6 +5998,10 @@ tornado = [
     {file = "tornado-6.1-cp39-cp39-win32.whl", hash = "sha256:d3d20ea5782ba63ed13bc2b8c291a053c8d807a8fa927d941bd718468f7b950c"},
     {file = "tornado-6.1-cp39-cp39-win_amd64.whl", hash = "sha256:548430be2740e327b3fe0201abe471f314741efcb0067ec4f2d7dcfb4825f3e4"},
     {file = "tornado-6.1.tar.gz", hash = "sha256:33c6e81d7bd55b468d2e793517c909b139960b6c790a60b7991b9b6b76fb9791"},
+]
+tqdm = [
+    {file = "tqdm-4.62.2-py2.py3-none-any.whl", hash = "sha256:80aead664e6c1672c4ae20dc50e1cdc5e20eeff9b14aa23ecd426375b28be588"},
+    {file = "tqdm-4.62.2.tar.gz", hash = "sha256:a4d6d112e507ef98513ac119ead1159d286deab17dffedd96921412c2d236ff5"},
 ]
 traitlets = [
     {file = "traitlets-5.1.0-py3-none-any.whl", hash = "sha256:03f172516916220b58c9f19d7f854734136dd9528103d04e9bf139a92c9f54c4"},

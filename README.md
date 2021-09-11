@@ -17,17 +17,29 @@ pyenv virtualenv $(sed "s/\/envs\// /" .python-version)
 Install dependencies:
 ```
 poetry install
-pip install git+https://github.com/openai/gym.git # The `RecordVideo` wrapper is waiting fo release
 ```
 
 Train agents:
 ```
 python ppo.py
-python ppo_atari.py
 ```
 
 Train agents with experiment tracking:
 ```
 python ppo.py --track --capture-video
+```
+
+## Atari
+Install dependencies:
+```
+poetry install -E atari
+AutoROM
+```
+Train agents:
+```
+python ppo_atari.py
+```
+Train agents with experiment tracking:
+```
 python ppo_atari.py --track --capture-video
 ```

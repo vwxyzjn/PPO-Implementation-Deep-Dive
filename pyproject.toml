@@ -11,8 +11,15 @@ stable-baselines3 = "^1.1.0"
 tensorboard = "^2.5.0"
 wandb = "0.12.1"
 pyglet = "^1.5.19"
-atari-py = "0.2.6"
 opencv-python = "^4.5.3"
+gym = {git = "https://github.com/openai/gym.git"}
+
+# Atari-related dependencies
+ale-py = {version = "^0.7", optional = true}
+AutoROM = {version = "^0.3.1", optional = true}
+
+# Pybullet-related dependencies
+pybullet = {version = "^3.1.8", optional = true}
 
 [tool.poetry.dev-dependencies]
 spyder = "^5.1.1"
@@ -20,3 +27,7 @@ spyder = "^5.1.1"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+atari = ["ale-py", "AutoROM"]
+pybullet = ["pybullet"]
