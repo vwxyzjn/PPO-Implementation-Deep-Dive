@@ -17,6 +17,7 @@ pyenv virtualenv $(sed "s/\/envs\// /" .python-version)
 Install dependencies:
 ```
 poetry install
+pip install git+https://github.com/openai/gym.git # The `RecordVideo` wrapper is waiting fo release
 ```
 
 Train agents:
