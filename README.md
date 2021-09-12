@@ -19,25 +19,24 @@ poetry install
 
 Train agents:
 ```
-python ppo.py
+poetry run python ppo.py
 ```
 
 Train agents with experiment tracking:
 ```
-python ppo.py --track --capture-video
+poetry run python ppo.py --track --capture-video
 ```
 
 ### Atari
 Install dependencies:
 ```
 poetry install -E atari
-AutoROM
 ```
 Train agents:
 ```
-python ppo_atari.py
+poetry run python ppo_atari.py
 ```
 Train agents with experiment tracking:
 ```
-python ppo_atari.py --track --capture-video
+poetry run python ppo_atari.py --track --capture-video
 ```

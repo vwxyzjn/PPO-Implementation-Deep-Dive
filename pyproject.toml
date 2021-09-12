@@ -12,11 +12,12 @@ tensorboard = "^2.5.0"
 wandb = "0.12.1"
 pyglet = "^1.5.19"
 opencv-python = "^4.5.3"
-gym = {git = "https://github.com/openai/gym.git"}
+gym = {git = "https://github.com/openai/gym.git", rev = "b1b00861345876dd4b9aa7908efaedfe40fe04c5"}
 
 # Atari-related dependencies
-ale-py = {version = "^0.7", optional = true}
-AutoROM = {version = "^0.3.1", optional = true}
+atari-py = {version = "0.2.6", optional = true}
+# ale-py = {version = "^0.7", optional = true}
+# AutoROM = {version = "^0.3.1", optional = true}
 
 # Pybullet-related dependencies
 pybullet = {version = "^3.1.8", optional = true}
@@ -29,5 +30,6 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.extras]
-atari = ["ale-py", "AutoROM"]
+# atari = ["ale-py", "AutoROM"]
+atari = ["atari-py"]
 pybullet = ["pybullet"]
