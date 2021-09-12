@@ -18,18 +18,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "ale-py"
-version = "0.7"
-description = "The Arcade Learning Environment (ALE) - a platform for AI research."
-category = "main"
-optional = true
-python-versions = ">=3.6"
-
-[package.dependencies]
-importlib-resources = "*"
-numpy = "*"
-
-[[package]]
 name = "applaunchservices"
 version = "0.2.1"
 description = "Simple package for registering an app with apple Launch Services to handle UTI and URL"
@@ -493,12 +481,12 @@ cloudpickle = ">=1.2.0"
 numpy = ">=1.18.0"
 
 [package.extras]
-all = ["box2d-py (==2.3.5)", "lz4 (>=3.1.0)", "ale-py (>=0.7,<1.0)", "scipy (>=1.4.1)", "opencv-python (>=3)", "pyglet (>=1.4.0)", "mujoco-py (>=1.50,<2.0)"]
-atari = ["ale-py (>=0.7,<1.0)"]
-box2d = ["box2d-py (==2.3.5)", "pyglet (>=1.4.0)"]
+all = ["opencv-python (>=3)", "scipy (>=1.4.1)", "pyglet (>=1.4.0)", "lz4 (>=3.1.0)", "box2d-py (>=2.3.5,<2.4.0)", "atari-py (==0.2.6)", "mujoco-py (>=1.50,<2.0)"]
+atari = ["atari-py (==0.2.6)", "opencv-python (>=3)"]
+box2d = ["box2d-py (>=2.3.5,<2.4.0)", "pyglet (>=1.4.0)"]
 classic_control = ["pyglet (>=1.4.0)"]
 mujoco = ["mujoco-py (>=1.50,<2.0)"]
-nomujoco = ["box2d-py (==2.3.5)", "lz4 (>=3.1.0)", "ale-py (>=0.7,<1.0)", "scipy (>=1.4.1)", "opencv-python (>=3)", "pyglet (>=1.4.0)"]
+nomujoco = ["opencv-python (>=3)", "scipy (>=1.4.1)", "pyglet (>=1.4.0)", "lz4 (>=3.1.0)", "box2d-py (>=2.3.5,<2.4.0)", "atari-py (==0.2.6)"]
 other = ["lz4 (>=3.1.0)", "opencv-python (>=3)"]
 robotics = ["mujoco-py (>=1.50,<2.0)"]
 toy_text = ["scipy (>=1.4.1)"]
@@ -506,8 +494,8 @@ toy_text = ["scipy (>=1.4.1)"]
 [package.source]
 type = "git"
 url = "https://github.com/openai/gym.git"
-reference = "master"
-resolved_reference = "7f863fd11a878724e544ba9033a2206855650fc3"
+reference = "b1b00861345876dd4b9aa7908efaedfe40fe04c5"
+resolved_reference = "b1b00861345876dd4b9aa7908efaedfe40fe04c5"
 
 [[package]]
 name = "idna"
@@ -540,21 +528,6 @@ zipp = ">=0.5"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 perf = ["ipython"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
-
-[[package]]
-name = "importlib-resources"
-version = "5.2.2"
-description = "Read resources from Python packages"
-category = "main"
-optional = true
-python-versions = ">=3.6"
-
-[package.dependencies]
-zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
-
-[package.extras]
-docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [[package]]
 name = "inflection"
@@ -3981,7 +3954,7 @@ python-versions = "*"
 name = "zipp"
 version = "3.5.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -3990,13 +3963,13 @@ docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [extras]
-atari = ["atari-py", "ale-py"]
+atari = ["atari-py"]
 pybullet = ["pybullet"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "b7c7a78ed7f1b17b4ba0daa35d52fa95f7f3a12c811cfdeeb1767a50a769f41e"
+content-hash = "c1c3e3eed685c85b7133678fcc0f633b67f39cfb9832fd11569187ff479e1fbd"
 
 [metadata.files]
 absl-py = [
@@ -4006,22 +3979,6 @@ absl-py = [
 alabaster = [
     {file = "alabaster-0.7.12-py2.py3-none-any.whl", hash = "sha256:446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359"},
     {file = "alabaster-0.7.12.tar.gz", hash = "sha256:a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"},
-]
-ale-py = [
-    {file = "ale_py-0.7-cp36-cp36m-macosx_10_15_x86_64.whl", hash = "sha256:39d4af211d1ac83312af2d4d60cb35d0ef3b60265c96cb6fc6d577fcb6ea193f"},
-    {file = "ale_py-0.7-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e0d6dc89e8232144959dc8ffe5fce4a7a30487ba69b64035afcf89ca8743261a"},
-    {file = "ale_py-0.7-cp36-cp36m-win_amd64.whl", hash = "sha256:9eac4b212f6387067f91247c11cfd75b7491801e5c66c373fc628f9cfa7837bd"},
-    {file = "ale_py-0.7-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:13d0108ca5f40ac2347f45c9af6c70bf3d4652b7854bedd003d989491e2f935f"},
-    {file = "ale_py-0.7-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ecb983ae8e9103801c426a098952f07b76cd1d9b142eed4dc1b7cfbf57f7658a"},
-    {file = "ale_py-0.7-cp37-cp37m-win_amd64.whl", hash = "sha256:3cbd48c266388510324c32342ba39617c5b163477fbbd23a89a22c0ff31005ef"},
-    {file = "ale_py-0.7-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:28b008ea09b05a1b279b17b65ed9b445c6e59420cc340644a42c97f68443123d"},
-    {file = "ale_py-0.7-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:b67292f041f1bbeae2a8ae84dcb1e593022b9414537de0e280ce3c390c0478c6"},
-    {file = "ale_py-0.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:55a9fcec7bb6f45da7350578e9c6642f3ea52f343f52f24452b53721fe8bd17d"},
-    {file = "ale_py-0.7-cp38-cp38-win_amd64.whl", hash = "sha256:e425bdfb1aa563a1e1a542460a00d34a11e02fb7e8c0e26aac4bf80b344d24af"},
-    {file = "ale_py-0.7-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:9dd69275009e02dac05be685a325f7cb9b16d17400e9978527e8604e1f5e5a31"},
-    {file = "ale_py-0.7-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:4e4ddd74afd2fb61fcf0a519a4d80c703a7d00abc64ba1ee2c62bbdef7a349ef"},
-    {file = "ale_py-0.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a120fd98a843f1b6c6fe7f1415e6e5f2efef4fcc50a81bab5c732b9fc958f84f"},
-    {file = "ale_py-0.7-cp39-cp39-win_amd64.whl", hash = "sha256:d398cb0733ca6a4f4b95d924a31d73b61c5db173cde7b2a09665f2c555893692"},
 ]
 applaunchservices = [
     {file = "applaunchservices-0.2.1-py3-none-any.whl", hash = "sha256:a3f942e3063f7e80beec06cc9d5a2b2b3a223484def7f9eb5c6da20a0cbc5b72"},
@@ -4319,10 +4276,6 @@ imagesize = [
 importlib-metadata = [
     {file = "importlib_metadata-4.8.1-py3-none-any.whl", hash = "sha256:b618b6d2d5ffa2f16add5697cf57a46c76a56229b0ed1c438322e4e95645bd15"},
     {file = "importlib_metadata-4.8.1.tar.gz", hash = "sha256:f284b3e11256ad1e5d03ab86bb2ccd6f5339688ff17a4d797a0fe7df326f23b1"},
-]
-importlib-resources = [
-    {file = "importlib_resources-5.2.2-py3-none-any.whl", hash = "sha256:2480d8e07d1890056cb53c96e3de44fead9c62f2ba949b0f2e4c4345f4afa977"},
-    {file = "importlib_resources-5.2.2.tar.gz", hash = "sha256:a65882a4d0fe5fbf702273456ba2ce74fe44892c25e42e057aca526b702a6d4b"},
 ]
 inflection = [
     {file = "inflection-0.5.1-py2.py3-none-any.whl", hash = "sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2"},
