@@ -41,3 +41,18 @@ Train agents with experiment tracking:
 ```
 poetry run python ppo_atari.py --track --capture-video
 ```
+
+
+### Pybullet
+Install dependencies:
+```
+poetry install -E pybullet
+```
+Train agents:
+```
+poetry run python ppo_continuous_action.py
+```
+Train agents with experiment tracking:
+```
+poetry run python ppo_continuous_action.py --track --capture-video
+```
