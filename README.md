@@ -1,6 +1,12 @@
 # PPO-Implementation-Deep-Dive
 
 This repo contains the source code for the [PPO Implementation Deep Dive] tutorial series. 
+
+1. [Proximal Policy Optimization Implementation Deep Dive | 11 Core Implementation Details](https://youtu.be/MEt6rrxH8W4)
+2. [Proximal Policy Optimization Implementation Deep Dive | 9 Atari-specific Details](https://youtu.be/05RMTj-2K_Y)
+3. [(draft) Proximal Policy Optimization Implementation Deep Dive | 8 Details for Continuous Actions](https://youtu.be/UuhwyahTgOk)
+
+
 You can find out where theses implementation details come from by visiting 
 my [blog post](https://costa.sh/blog-the-32-implementation-details-of-ppo.html), which contains
 github permanent links of the details to the original implementation.
