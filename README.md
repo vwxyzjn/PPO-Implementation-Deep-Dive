@@ -6,6 +6,9 @@ This repo contains the source code for the PPO Implementation Deep Dive tutorial
 2. [Proximal Policy Optimization Implementation Deep Dive | 9 Atari-specific Details](https://youtu.be/05RMTj-2K_Y)
 3. [Proximal Policy Optimization Implementation Deep Dive | 8 Details for Continuous Actions](https://youtu.be/BvZvx7ENZBw)
 
+![image](https://user-images.githubusercontent.com/5555347/144305162-435cf10f-780a-4681-bb7e-95b84f4e0146.png)
+
+
 
 You can find out where theses implementation details come from by visiting 
 my [blog post](https://costa.sh/blog-the-32-implementation-details-of-ppo.html), which contains
