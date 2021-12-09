@@ -42,7 +42,6 @@ poetry run python ppo.py --track --capture-video
 Install dependencies:
 ```
 poetry install -E atari
-poetry run AutoROM
 ```
 Train agents:
 ```
