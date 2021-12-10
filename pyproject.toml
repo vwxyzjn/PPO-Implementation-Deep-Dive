@@ -19,16 +19,20 @@ atari-py = {version = "0.2.6", optional = true}
 ale-py = {version = "^0.7", optional = true}
 AutoROM = {version = "^0.4.2", optional = true, extras = ["accept-rom-license"]}
 
-# Pybullet-related dependencies
+# Robotics env dependencies
 pybullet = {version = "^3.1.8", optional = true}
+free-mujoco-py = {version = "^2.1.6", optional = true}
 
 [tool.poetry.dev-dependencies]
-spyder = "^5.1.1"
+spyder = {version = "^5.1.1", optional = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.extras]
+spyder = ["spyder"]
 atari = ["ale-py", "AutoROM"]
 pybullet = ["pybullet"]
+mujoco = ["free-mujoco-py"]
+
