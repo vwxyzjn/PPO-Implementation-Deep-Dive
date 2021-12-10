@@ -13,7 +13,7 @@ six = "*"
 name = "alabaster"
 version = "0.7.12"
 description = "A configurable sidebar-enabled Sphinx theme"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -37,7 +37,7 @@ test = ["pytest", "gym"]
 name = "applaunchservices"
 version = "0.2.1"
 description = "Simple package for registering an app with apple Launch Services to handle UTI and URL"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -48,7 +48,7 @@ pyobjc = "*"
 name = "appnope"
 version = "0.1.2"
 description = "Disable App Nap on macOS >= 10.9"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -56,7 +56,7 @@ python-versions = "*"
 name = "argcomplete"
 version = "1.12.3"
 description = "Bash tab completion for argparse"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -70,7 +70,7 @@ test = ["coverage", "flake8", "pexpect", "wheel"]
 name = "arrow"
 version = "1.2.1"
 description = "Better dates & times for Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -82,7 +82,7 @@ typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
 name = "astroid"
 version = "2.6.6"
 description = "An abstract syntax tree for Python with inference support."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "~=3.6"
 
@@ -108,7 +108,7 @@ six = "*"
 name = "atomicwrites"
 version = "1.4.0"
 description = "Atomic file writes."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -116,7 +116,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "attrs"
 version = "21.2.0"
 description = "Classes Without Boilerplate"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -130,7 +130,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 name = "autopep8"
 version = "1.5.7"
 description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -177,7 +177,7 @@ tests = ["ale-py", "multi-agent-ale-py"]
 name = "babel"
 version = "2.9.1"
 description = "Internationalization utilities"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -188,7 +188,7 @@ pytz = ">=2015.7"
 name = "backcall"
 version = "0.2.0"
 description = "Specifications for callback functions passed in to an API"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -196,7 +196,7 @@ python-versions = "*"
 name = "bcrypt"
 version = "3.2.0"
 description = "Modern password hashing for your software and your servers"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -212,7 +212,7 @@ typecheck = ["mypy"]
 name = "binaryornot"
 version = "0.4.4"
 description = "Ultra-lightweight pure Python package to check if a file is binary or text."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -223,7 +223,7 @@ chardet = ">=3.0.2"
 name = "black"
 version = "21.12b0"
 description = "The uncompromising code formatter."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6.2"
 
@@ -247,7 +247,7 @@ uvloop = ["uvloop (>=0.15.2)"]
 name = "bleach"
 version = "4.1.0"
 description = "An easy safelist-based HTML-sanitizing tool."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -255,6 +255,38 @@ python-versions = ">=3.6"
 packaging = "*"
 six = ">=1.9.0"
 webencodings = "*"
+
+[[package]]
+name = "boto3"
+version = "1.20.23"
+description = "The AWS SDK for Python"
+category = "main"
+optional = true
+python-versions = ">= 3.6"
+
+[package.dependencies]
+botocore = ">=1.23.23,<1.24.0"
+jmespath = ">=0.7.1,<1.0.0"
+s3transfer = ">=0.5.0,<0.6.0"
+
+[package.extras]
+crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
+
+[[package]]
+name = "botocore"
+version = "1.23.23"
+description = "Low-level, data-driven core of boto 3."
+category = "main"
+optional = true
+python-versions = ">= 3.6"
+
+[package.dependencies]
+jmespath = ">=0.7.1,<1.0.0"
+python-dateutil = ">=2.1,<3.0.0"
+urllib3 = ">=1.25.4,<1.27"
+
+[package.extras]
+crt = ["awscrt (==0.12.5)"]
 
 [[package]]
 name = "cachetools"
@@ -287,7 +319,7 @@ pycparser = "*"
 name = "chardet"
 version = "4.0.0"
 description = "Universal encoding detector for Python 2 and 3"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -346,7 +378,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 name = "cookiecutter"
 version = "1.7.3"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -364,7 +396,7 @@ six = ">=1.10"
 name = "cryptography"
 version = "36.0.0"
 description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -399,7 +431,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "debugpy"
 version = "1.5.1"
 description = "An implementation of the Debug Adapter Protocol for Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 
@@ -407,7 +439,7 @@ python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 name = "decorator"
 version = "5.1.0"
 description = "Decorators for Humans"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -415,7 +447,7 @@ python-versions = ">=3.5"
 name = "defusedxml"
 version = "0.7.1"
 description = "XML bomb protection for Python stdlib modules"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -423,7 +455,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "diff-match-patch"
 version = "20200713"
 description = "Repackaging of Google's Diff Match and Patch libraries. Offers robust algorithms to perform the operations required for synchronizing plain text."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7"
 
@@ -442,7 +474,7 @@ six = ">=1.4.0"
 name = "docutils"
 version = "0.17.1"
 description = "Docutils -- Python Documentation Utilities"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -450,7 +482,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "entrypoints"
 version = "0.3"
 description = "Discover and load entry points from installed packages."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7"
 
@@ -470,7 +502,7 @@ six = "*"
 name = "flake8"
 version = "3.9.2"
 description = "the modular source code checker: pep8 pyflakes and co"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
@@ -658,7 +690,7 @@ tifffile = ["tifffile"]
 name = "imagesize"
 version = "1.3.0"
 description = "Getting image size from png/jpeg/jpeg2000/gif file"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -698,7 +730,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 name = "inflection"
 version = "0.5.1"
 description = "A port of Ruby on Rails inflector to Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -706,7 +738,7 @@ python-versions = ">=3.5"
 name = "intervaltree"
 version = "3.1.0"
 description = "Editable interval tree data structure for Python 2 and 3"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -717,7 +749,7 @@ sortedcontainers = ">=2.0,<3.0"
 name = "ipykernel"
 version = "6.6.0"
 description = "IPython Kernel for Jupyter"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.7"
 
@@ -739,7 +771,7 @@ test = ["pytest (!=5.3.4)", "pytest-cov", "flaky", "ipyparallel"]
 name = "ipython"
 version = "7.30.1"
 description = "IPython: Productive Interactive Computing"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.7"
 
@@ -771,7 +803,7 @@ test = ["nose (>=0.10.1)", "requests", "testpath", "pygments", "nbformat", "ipyk
 name = "ipython-genutils"
 version = "0.2.0"
 description = "Vestigial utilities from IPython"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -779,7 +811,7 @@ python-versions = "*"
 name = "isort"
 version = "5.10.1"
 description = "A Python utility / library to sort Python imports."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6.1,<4.0"
 
@@ -793,7 +825,7 @@ plugins = ["setuptools"]
 name = "jedi"
 version = "0.18.1"
 description = "An autocompletion tool for Python that can be used for text editors."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -808,7 +840,7 @@ testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<7.0.0)"]
 name = "jeepney"
 version = "0.7.1"
 description = "Low-level, pure Python DBus protocol wrapper."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -820,7 +852,7 @@ trio = ["trio", "async-generator"]
 name = "jinja2"
 version = "3.0.3"
 description = "A very fast and expressive template engine."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -834,7 +866,7 @@ i18n = ["Babel (>=2.7)"]
 name = "jinja2-time"
 version = "0.2.0"
 description = "Jinja2 Extension for Dates and Times"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -843,10 +875,18 @@ arrow = "*"
 jinja2 = "*"
 
 [[package]]
+name = "jmespath"
+version = "0.10.0"
+description = "JSON Matching Expressions"
+category = "main"
+optional = true
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
 name = "jsonschema"
 version = "4.2.1"
 description = "An implementation of JSON Schema validation for Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.7"
 
@@ -864,7 +904,7 @@ format_nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-
 name = "jupyter-client"
 version = "6.2.0"
 description = "Jupyter protocol implementation and client libraries"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6.1"
 
@@ -884,7 +924,7 @@ test = ["async-generator", "ipykernel", "ipython", "mock", "pytest-asyncio", "py
 name = "jupyter-core"
 version = "4.9.1"
 description = "Jupyter core package. A base package on which Jupyter projects rely."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -896,7 +936,7 @@ traitlets = "*"
 name = "jupyterlab-pygments"
 version = "0.1.2"
 description = "Pygments theme using JupyterLab CSS variables"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -907,7 +947,7 @@ pygments = ">=2.4.1,<3"
 name = "keyring"
 version = "23.4.0"
 description = "Store and access your passwords safely."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -930,10 +970,23 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "launcha"
+version = "0.0.1"
+description = ""
+category = "main"
+optional = true
+python-versions = ">=3.7.1,<4.0.0"
+
+[package.dependencies]
+boto3 = ">=1.20.7,<2.0.0"
+requests = ">=2.26.0,<3.0.0"
+wandb = ">=0.12.6,<0.13.0"
+
+[[package]]
 name = "lazy-object-proxy"
 version = "1.6.0"
 description = "A fast and thorough lazy object proxy."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
@@ -955,7 +1008,7 @@ testing = ["coverage", "pyyaml"]
 name = "markupsafe"
 version = "2.0.1"
 description = "Safely add untrusted strings to HTML/XML markup."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -982,7 +1035,7 @@ setuptools_scm = ">=4"
 name = "matplotlib-inline"
 version = "0.1.3"
 description = "Inline Matplotlib backend for Jupyter"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -993,7 +1046,7 @@ traitlets = "*"
 name = "mccabe"
 version = "0.6.1"
 description = "McCabe checker, plugin for flake8"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1001,7 +1054,7 @@ python-versions = "*"
 name = "mistune"
 version = "0.8.4"
 description = "The fastest markdown parser in pure Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1017,7 +1070,7 @@ python-versions = "*"
 name = "mypy-extensions"
 version = "0.4.3"
 description = "Experimental type system extensions for programs checked with the mypy typechecker."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1025,7 +1078,7 @@ python-versions = "*"
 name = "nbclient"
 version = "0.5.9"
 description = "A client library for executing notebooks. Formerly nbconvert's ExecutePreprocessor."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6.1"
 
@@ -1044,7 +1097,7 @@ test = ["codecov", "coverage", "ipython", "ipykernel", "ipywidgets", "pytest (>=
 name = "nbconvert"
 version = "6.3.0"
 description = "Converting Jupyter Notebooks"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.7"
 
@@ -1074,7 +1127,7 @@ webpdf = ["pyppeteer (==0.2.6)"]
 name = "nbformat"
 version = "5.1.3"
 description = "The Jupyter Notebook format"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -1092,7 +1145,7 @@ test = ["check-manifest", "fastjsonschema", "testpath", "pytest", "pytest-cov"]
 name = "nest-asyncio"
 version = "1.5.4"
 description = "Patch asyncio to allow nested event loops"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -1108,7 +1161,7 @@ python-versions = ">=3.7,<3.11"
 name = "numpydoc"
 version = "1.1.0"
 description = "Sphinx extension to support docstrings in Numpy format"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -1178,7 +1231,7 @@ test = ["hypothesis (>=3.58)", "pytest (>=6.0)", "pytest-xdist"]
 name = "pandocfilters"
 version = "1.5.0"
 description = "Utilities for writing pandoc filters in python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1186,7 +1239,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "paramiko"
 version = "2.8.1"
 description = "SSH2 protocol library"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1205,7 +1258,7 @@ invoke = ["invoke (>=1.3)"]
 name = "parso"
 version = "0.8.3"
 description = "A Python Parser"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1217,7 +1270,7 @@ testing = ["docopt", "pytest (<6.0.0)"]
 name = "pathspec"
 version = "0.9.0"
 description = "Utility library for gitignore style pattern matching of file paths."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
@@ -1233,7 +1286,7 @@ python-versions = "*"
 name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1244,7 +1297,7 @@ ptyprocess = ">=0.5"
 name = "pickleshare"
 version = "0.7.5"
 description = "Tiny 'shelve'-like database with concurrency support"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1260,7 +1313,7 @@ python-versions = ">=3.6"
 name = "platformdirs"
 version = "2.4.0"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1272,7 +1325,7 @@ test = ["appdirs (==1.4.4)", "pytest (>=6)", "pytest-cov (>=2.7)", "pytest-mock 
 name = "pluggy"
 version = "1.0.0"
 description = "plugin and hook calling mechanisms for python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1287,7 +1340,7 @@ testing = ["pytest", "pytest-benchmark"]
 name = "poyo"
 version = "0.5.0"
 description = "A lightweight YAML Parser for Python. 🐓"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1309,7 +1362,7 @@ test = ["pytest (>=2.7.3)", "pytest-cov", "coveralls", "futures", "pytest-benchm
 name = "prompt-toolkit"
 version = "3.0.24"
 description = "Library for building powerful interactive command lines in Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6.2"
 
@@ -1339,7 +1392,7 @@ test = ["ipaddress", "mock", "unittest2", "enum34", "pywin32", "wmi"]
 name = "ptyprocess"
 version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -1347,7 +1400,7 @@ python-versions = "*"
 name = "py"
 version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -1382,7 +1435,7 @@ python-versions = "*"
 name = "pycodestyle"
 version = "2.7.0"
 description = "Python style guide checker"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1398,7 +1451,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "pydocstyle"
 version = "6.1.1"
 description = "Python docstring style checker"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1412,7 +1465,7 @@ toml = ["toml"]
 name = "pyflakes"
 version = "2.3.1"
 description = "passive checker of Python programs"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1428,7 +1481,7 @@ python-versions = "*"
 name = "pygments"
 version = "2.10.0"
 description = "Pygments is a syntax highlighting package written in Python."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -1436,7 +1489,7 @@ python-versions = ">=3.5"
 name = "pylint"
 version = "2.9.6"
 description = "python code static checker"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "~=3.6"
 
@@ -1451,7 +1504,7 @@ toml = ">=0.7.1"
 name = "pyls-spyder"
 version = "0.4.0"
 description = "Spyder extensions for the python-lsp-server"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">= 3.6"
 
@@ -1462,7 +1515,7 @@ python-lsp-server = ">=1.0.1"
 name = "pynacl"
 version = "1.4.0"
 description = "Python binding to the Networking and Cryptography (NaCl) library"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1478,7 +1531,7 @@ tests = ["pytest (>=3.2.1,!=3.3.0)", "hypothesis (>=3.27.0)"]
 name = "pyobjc"
 version = "8.1"
 description = "Python<->ObjC Interoperability Module"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1630,7 +1683,7 @@ allbindings = ["pyobjc-core (==8.1)", "pyobjc-framework-libdispatch (==8.1)", "p
 name = "pyobjc-core"
 version = "8.1"
 description = "Python<->ObjC Interoperability Module"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1638,7 +1691,7 @@ python-versions = ">=3.6"
 name = "pyobjc-framework-accessibility"
 version = "8.1"
 description = "Wrappers for the framework Accessibility on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1651,7 +1704,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-accounts"
 version = "8.1"
 description = "Wrappers for the framework Accounts on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1663,7 +1716,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-addressbook"
 version = "8.1"
 description = "Wrappers for the framework AddressBook on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1675,7 +1728,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-adservices"
 version = "8.1"
 description = "Wrappers for the framework AdServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1687,7 +1740,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-adsupport"
 version = "8.1"
 description = "Wrappers for the framework AdSupport on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1699,7 +1752,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-applescriptkit"
 version = "8.1"
 description = "Wrappers for the framework AppleScriptKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1711,7 +1764,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-applescriptobjc"
 version = "8.1"
 description = "Wrappers for the framework AppleScriptObjC on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1723,7 +1776,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-applicationservices"
 version = "8.1"
 description = "Wrappers for the framework ApplicationServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1736,7 +1789,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-apptrackingtransparency"
 version = "8.1"
 description = "Wrappers for the framework AppTrackingTransparency on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1748,7 +1801,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-audiovideobridging"
 version = "8.1"
 description = "Wrappers for the framework AudioVideoBridging on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1760,7 +1813,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-authenticationservices"
 version = "8.1"
 description = "Wrappers for the framework AuthenticationServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1772,7 +1825,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-automaticassessmentconfiguration"
 version = "8.1"
 description = "Wrappers for the framework AutomaticAssessmentConfiguration on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1784,7 +1837,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-automator"
 version = "8.1"
 description = "Wrappers for the framework Automator on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1796,7 +1849,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-avfoundation"
 version = "8.1"
 description = "Wrappers for the framework AVFoundation on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1811,7 +1864,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-avkit"
 version = "8.1"
 description = "Wrappers for the framework AVKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1824,7 +1877,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-businesschat"
 version = "8.1"
 description = "Wrappers for the framework BusinessChat on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1836,7 +1889,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-calendarstore"
 version = "8.1"
 description = "Wrappers for the framework CalendarStore on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1848,7 +1901,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-callkit"
 version = "8.1"
 description = "Wrappers for the framework CallKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1860,7 +1913,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-cfnetwork"
 version = "8.1"
 description = "Wrappers for the framework CFNetwork on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1872,7 +1925,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-classkit"
 version = "8.1"
 description = "Wrappers for the framework ClassKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1884,7 +1937,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-cloudkit"
 version = "8.1"
 description = "Wrappers for the framework CloudKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1899,7 +1952,7 @@ pyobjc-framework-CoreLocation = ">=8.1"
 name = "pyobjc-framework-cocoa"
 version = "8.1"
 description = "Wrappers for the Cocoa frameworks on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1910,7 +1963,7 @@ pyobjc-core = ">=8.1"
 name = "pyobjc-framework-collaboration"
 version = "8.1"
 description = "Wrappers for the framework Collaboration on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1922,7 +1975,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-colorsync"
 version = "8.1"
 description = "Wrappers for the framework ColorSync on Mac OS X"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1934,7 +1987,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-contacts"
 version = "8.1"
 description = "Wrappers for the framework Contacts on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1946,7 +1999,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-contactsui"
 version = "8.1"
 description = "Wrappers for the framework ContactsUI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1959,7 +2012,7 @@ pyobjc-framework-Contacts = ">=8.1"
 name = "pyobjc-framework-coreaudio"
 version = "8.1"
 description = "Wrappers for the framework CoreAudio on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1971,7 +2024,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coreaudiokit"
 version = "8.1"
 description = "Wrappers for the framework CoreAudioKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1984,7 +2037,7 @@ pyobjc-framework-CoreAudio = ">=8.1"
 name = "pyobjc-framework-corebluetooth"
 version = "8.1"
 description = "Wrappers for the framework CoreBluetooth on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -1996,7 +2049,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coredata"
 version = "8.1"
 description = "Wrappers for the framework CoreData on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2008,7 +2061,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-corehaptics"
 version = "8.1"
 description = "Wrappers for the framework CoreHaptics on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2020,7 +2073,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-corelocation"
 version = "8.1"
 description = "Wrappers for the framework CoreLocation on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2032,7 +2085,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coremedia"
 version = "8.1"
 description = "Wrappers for the framework CoreMedia on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2044,7 +2097,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coremediaio"
 version = "8.1"
 description = "Wrappers for the framework CoreMediaIO on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2056,7 +2109,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coremidi"
 version = "8.1"
 description = "Wrappers for the framework CoreMIDI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2068,7 +2121,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coreml"
 version = "8.1"
 description = "Wrappers for the framework CoreML on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2080,7 +2133,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coremotion"
 version = "8.1"
 description = "Wrappers for the framework CoreMotion on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2092,7 +2145,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coreservices"
 version = "8.1"
 description = "Wrappers for the framework CoreServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2104,7 +2157,7 @@ pyobjc-framework-FSEvents = ">=8.1"
 name = "pyobjc-framework-corespotlight"
 version = "8.1"
 description = "Wrappers for the framework CoreSpotlight on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2116,7 +2169,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-coretext"
 version = "8.1"
 description = "Wrappers for the framework CoreText on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2129,7 +2182,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-corewlan"
 version = "8.1"
 description = "Wrappers for the framework CoreWLAN on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2141,7 +2194,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-cryptotokenkit"
 version = "8.1"
 description = "Wrappers for the framework CryptoTokenKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2153,7 +2206,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-datadetection"
 version = "8.1"
 description = "Wrappers for the framework DataDetection on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2165,7 +2218,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-devicecheck"
 version = "8.1"
 description = "Wrappers for the framework DeviceCheck on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2177,7 +2230,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-dictionaryservices"
 version = "8.1"
 description = "Wrappers for the framework DictionaryServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2189,7 +2242,7 @@ pyobjc-framework-CoreServices = ">=8.1"
 name = "pyobjc-framework-discrecording"
 version = "8.1"
 description = "Wrappers for the framework DiscRecording on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2201,7 +2254,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-discrecordingui"
 version = "8.1"
 description = "Wrappers for the framework DiscRecordingUI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2214,7 +2267,7 @@ pyobjc-framework-DiscRecording = ">=8.1"
 name = "pyobjc-framework-diskarbitration"
 version = "8.1"
 description = "Wrappers for the framework DiskArbitration on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2226,7 +2279,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-dvdplayback"
 version = "8.1"
 description = "Wrappers for the framework DVDPlayback on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2238,7 +2291,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-eventkit"
 version = "8.1"
 description = "Wrappers for the framework Accounts on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2250,7 +2303,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-exceptionhandling"
 version = "8.1"
 description = "Wrappers for the framework ExceptionHandling on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2262,7 +2315,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-executionpolicy"
 version = "8.1"
 description = "Wrappers for the framework ExecutionPolicy on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2274,7 +2327,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-externalaccessory"
 version = "8.1"
 description = "Wrappers for the framework ExternalAccessory on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2286,7 +2339,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-fileprovider"
 version = "8.1"
 description = "Wrappers for the framework FileProvider on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2298,7 +2351,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-fileproviderui"
 version = "8.1"
 description = "Wrappers for the framework FileProviderUI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2310,7 +2363,7 @@ pyobjc-framework-FileProvider = ">=8.1"
 name = "pyobjc-framework-findersync"
 version = "8.1"
 description = "Wrappers for the framework FinderSync on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2322,7 +2375,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-fsevents"
 version = "8.1"
 description = "Wrappers for the framework FSEvents on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2334,7 +2387,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-gamecenter"
 version = "8.1"
 description = "Wrappers for the framework GameCenter on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2346,7 +2399,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-gamecontroller"
 version = "8.1"
 description = "Wrappers for the framework GameController on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2358,7 +2411,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-gamekit"
 version = "8.1"
 description = "Wrappers for the framework GameKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2371,7 +2424,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-gameplaykit"
 version = "8.1"
 description = "Wrappers for the framework GameplayKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2384,7 +2437,7 @@ pyobjc-framework-SpriteKit = ">=8.1"
 name = "pyobjc-framework-imagecapturecore"
 version = "8.1"
 description = "Wrappers for the framework ImageCaptureCore on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2396,7 +2449,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-imserviceplugin"
 version = "8.1"
 description = "Wrappers for the framework IMServicePlugIn on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2408,7 +2461,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-inputmethodkit"
 version = "8.1"
 description = "Wrappers for the framework InputMethodKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2420,7 +2473,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-installerplugins"
 version = "8.1"
 description = "Wrappers for the framework InstallerPlugins on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2432,7 +2485,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-instantmessage"
 version = "8.1"
 description = "Wrappers for the framework InstantMessage on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2445,7 +2498,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-intents"
 version = "8.1"
 description = "Wrappers for the framework Intents on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2457,7 +2510,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-intentsui"
 version = "8.1"
 description = "Wrappers for the framework Intents on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2469,7 +2522,7 @@ pyobjc-framework-Intents = ">=8.1"
 name = "pyobjc-framework-iosurface"
 version = "8.1"
 description = "Wrappers for the framework IOSurface on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2481,7 +2534,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-ituneslibrary"
 version = "8.1"
 description = "Wrappers for the framework iTunesLibrary on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2493,7 +2546,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-kernelmanagement"
 version = "8.1"
 description = "Wrappers for the framework KernelManagement on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2505,7 +2558,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-latentsemanticmapping"
 version = "8.1"
 description = "Wrappers for the framework LatentSemanticMapping on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2517,7 +2570,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-launchservices"
 version = "8.1"
 description = "Wrappers for the framework LaunchServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2529,7 +2582,7 @@ pyobjc-framework-CoreServices = ">=8.1"
 name = "pyobjc-framework-libdispatch"
 version = "8.1"
 description = "Wrappers for libdispatch on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2540,7 +2593,7 @@ pyobjc-core = ">=8.1"
 name = "pyobjc-framework-linkpresentation"
 version = "8.1"
 description = "Wrappers for the framework LinkPresentation on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2553,7 +2606,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-localauthentication"
 version = "8.1"
 description = "Wrappers for the framework LocalAuthentication on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2566,7 +2619,7 @@ pyobjc-framework-Security = ">=8.1"
 name = "pyobjc-framework-localauthenticationembeddedui"
 version = "8.1"
 description = "Wrappers for the framework LocalAuthenticationEmbeddedUI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2579,7 +2632,7 @@ pyobjc-framework-LocalAuthentication = ">=8.1"
 name = "pyobjc-framework-mailkit"
 version = "8.1"
 description = "Wrappers for the framework MailKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2591,7 +2644,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-mapkit"
 version = "8.1"
 description = "Wrappers for the framework MapKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2605,7 +2658,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-mediaaccessibility"
 version = "8.1"
 description = "Wrappers for the framework MediaAccessibility on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2617,7 +2670,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-medialibrary"
 version = "8.1"
 description = "Wrappers for the framework MediaLibrary on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2630,7 +2683,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-mediaplayer"
 version = "8.1"
 description = "Wrappers for the framework MediaPlayer on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2642,7 +2695,7 @@ pyobjc-framework-AVFoundation = ">=8.1"
 name = "pyobjc-framework-mediatoolbox"
 version = "8.1"
 description = "Wrappers for the framework MediaToolbox on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2654,7 +2707,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-message"
 version = "8.1"
 description = "Wrappers for the framework Message on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2666,7 +2719,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-metal"
 version = "8.1"
 description = "Wrappers for the framework Metal on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2678,7 +2731,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-metalkit"
 version = "8.1"
 description = "Wrappers for the framework MetalKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2691,7 +2744,7 @@ pyobjc-framework-Metal = ">=8.1"
 name = "pyobjc-framework-metalperformanceshaders"
 version = "8.1"
 description = "Wrappers for the framework MetalPerformanceShaders on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2703,7 +2756,7 @@ pyobjc-framework-Metal = ">=8.1"
 name = "pyobjc-framework-metalperformanceshadersgraph"
 version = "8.1"
 description = "Wrappers for the framework MetalPerformanceShadersGraph on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2715,7 +2768,7 @@ pyobjc-framework-MetalPerformanceShaders = ">=8.1"
 name = "pyobjc-framework-metrickit"
 version = "8.1"
 description = "Wrappers for the framework MetricKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2727,7 +2780,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-mlcompute"
 version = "8.1"
 description = "Wrappers for the framework MLCompute on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2739,7 +2792,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-modelio"
 version = "8.1"
 description = "Wrappers for the framework ModelIO on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2752,7 +2805,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-multipeerconnectivity"
 version = "8.1"
 description = "Wrappers for the framework MultipeerConnectivity on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2764,7 +2817,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-naturallanguage"
 version = "8.1"
 description = "Wrappers for the framework NaturalLanguage on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2776,7 +2829,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-netfs"
 version = "8.1"
 description = "Wrappers for the framework NetFS on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2788,7 +2841,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-network"
 version = "8.1"
 description = "Wrappers for the framework Network on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2800,7 +2853,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-networkextension"
 version = "8.1"
 description = "Wrappers for the framework NetworkExtension on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2812,7 +2865,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-notificationcenter"
 version = "8.1"
 description = "Wrappers for the framework NotificationCenter on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2824,7 +2877,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-opendirectory"
 version = "8.1"
 description = "Wrappers for the framework OpenDirectory on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2836,7 +2889,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-osakit"
 version = "8.1"
 description = "Wrappers for the framework OSAKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2848,7 +2901,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-oslog"
 version = "8.1"
 description = "Wrappers for the framework OSLog on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2862,7 +2915,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-passkit"
 version = "8.1"
 description = "Wrappers for the framework PassKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2874,7 +2927,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-pencilkit"
 version = "8.1"
 description = "Wrappers for the framework PencilKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2886,7 +2939,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-photos"
 version = "8.1"
 description = "Wrappers for the framework Photos on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2898,7 +2951,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-photosui"
 version = "8.1"
 description = "Wrappers for the framework PhotosUI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2910,7 +2963,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-preferencepanes"
 version = "8.1"
 description = "Wrappers for the framework PreferencePanes on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2922,7 +2975,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-pubsub"
 version = "8.1"
 description = "Wrappers for the framework PubSub on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2934,7 +2987,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-pushkit"
 version = "8.1"
 description = "Wrappers for the framework PushKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2946,7 +2999,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-quartz"
 version = "8.1"
 description = "Wrappers for the Quartz frameworks on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2958,7 +3011,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-quicklookthumbnailing"
 version = "8.1"
 description = "Wrappers for the framework QuickLookThumbnailing on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2971,7 +3024,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-replaykit"
 version = "8.1"
 description = "Wrappers for the framework ReplayKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2983,7 +3036,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-safariservices"
 version = "8.1"
 description = "Wrappers for the framework SafariServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -2995,7 +3048,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-scenekit"
 version = "8.1"
 description = "Wrappers for the framework SceneKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3008,7 +3061,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-screensaver"
 version = "8.1"
 description = "Wrappers for the framework ScreenSaver on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3020,7 +3073,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-screentime"
 version = "8.1"
 description = "Wrappers for the framework ScreenTime on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3032,7 +3085,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-scriptingbridge"
 version = "8.1"
 description = "Wrappers for the framework ScriptingBridge on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3044,7 +3097,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-searchkit"
 version = "8.1"
 description = "Wrappers for the framework SearchKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3056,7 +3109,7 @@ pyobjc-framework-CoreServices = ">=8.1"
 name = "pyobjc-framework-security"
 version = "8.1"
 description = "Wrappers for the framework Security on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3068,7 +3121,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-securityfoundation"
 version = "8.1"
 description = "Wrappers for the framework SecurityFoundation on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3081,7 +3134,7 @@ pyobjc-framework-Security = ">=8.1"
 name = "pyobjc-framework-securityinterface"
 version = "8.1"
 description = "Wrappers for the framework SecurityInterface on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3094,7 +3147,7 @@ pyobjc-framework-Security = ">=8.1"
 name = "pyobjc-framework-servernotification"
 version = "8.1"
 description = "Wrappers for the framework ServerNotification on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3106,7 +3159,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-servicemanagement"
 version = "8.1"
 description = "Wrappers for the framework ServiceManagement on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3118,7 +3171,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-shazamkit"
 version = "8.1"
 description = "Wrappers for the framework ShazamKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3130,7 +3183,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-social"
 version = "8.1"
 description = "Wrappers for the framework Social on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3142,7 +3195,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-soundanalysis"
 version = "8.1"
 description = "Wrappers for the framework SoundAnalysis on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3154,7 +3207,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-speech"
 version = "8.1"
 description = "Wrappers for the framework Speech on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3166,7 +3219,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-spritekit"
 version = "8.1"
 description = "Wrappers for the framework SpriteKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3179,7 +3232,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-storekit"
 version = "8.1"
 description = "Wrappers for the framework StoreKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3191,7 +3244,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-syncservices"
 version = "8.1"
 description = "Wrappers for the framework SyncServices on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3204,7 +3257,7 @@ pyobjc-framework-CoreData = ">=8.1"
 name = "pyobjc-framework-systemconfiguration"
 version = "8.1"
 description = "Wrappers for the framework SystemConfiguration on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3216,7 +3269,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-systemextensions"
 version = "8.1"
 description = "Wrappers for the framework SystemExtensions on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3228,7 +3281,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-uniformtypeidentifiers"
 version = "8.1"
 description = "Wrappers for the framework UniformTypeIdentifiers on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3240,7 +3293,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-usernotifications"
 version = "8.1"
 description = "Wrappers for the framework UserNotifications on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3252,7 +3305,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-usernotificationsui"
 version = "8.1"
 description = "Wrappers for the framework UserNotificationsUI on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3265,7 +3318,7 @@ pyobjc-framework-UserNotifications = ">=8.1"
 name = "pyobjc-framework-videosubscriberaccount"
 version = "8.1"
 description = "Wrappers for the framework VideoSubscriberAccount on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3277,7 +3330,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-videotoolbox"
 version = "8.1"
 description = "Wrappers for the framework VideoToolbox on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3291,7 +3344,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-virtualization"
 version = "8.1"
 description = "Wrappers for the framework Virtualization on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3303,7 +3356,7 @@ pyobjc-framework-Cocoa = ">=8.1"
 name = "pyobjc-framework-vision"
 version = "8.1"
 description = "Wrappers for the framework Vision on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3317,7 +3370,7 @@ pyobjc-framework-Quartz = ">=8.1"
 name = "pyobjc-framework-webkit"
 version = "8.1"
 description = "Wrappers for the framework WebKit on macOS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3340,7 +3393,7 @@ diagrams = ["jinja2", "railroad-diagrams"]
 name = "pyqt5"
 version = "5.12.3"
 description = "Python bindings for the Qt cross platform UI and application toolkit"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3351,7 +3404,7 @@ PyQt5_sip = ">=4.19.14,<13"
 name = "pyqt5-sip"
 version = "12.9.0"
 description = "The sip module support for PyQt5"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -3359,7 +3412,7 @@ python-versions = ">=3.5"
 name = "pyqtwebengine"
 version = "5.12.1"
 description = "Python bindings for the Qt WebEngine framework"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3370,7 +3423,7 @@ PyQt5 = ">=5.12"
 name = "pyrsistent"
 version = "0.18.0"
 description = "Persistent/Functional/Immutable data structures"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3389,7 +3442,7 @@ six = ">=1.5"
 name = "python-lsp-black"
 version = "1.0.1"
 description = "Black plugin for the Python LSP Server"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3405,7 +3458,7 @@ dev = ["flake8", "isort (>=5.0)", "mypy", "pre-commit", "pytest", "types-pkg-res
 name = "python-lsp-jsonrpc"
 version = "1.0.0"
 description = "JSON RPC 2.0 server library"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3419,7 +3472,7 @@ test = ["pylint", "pycodestyle", "pyflakes", "pytest", "pytest-cov", "coverage"]
 name = "python-lsp-server"
 version = "1.2.4"
 description = "Python Language Server for the Language Server Protocol"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3455,7 +3508,7 @@ yapf = ["yapf"]
 name = "python-slugify"
 version = "5.0.2"
 description = "A Python Slugify application that handles Unicode"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3477,7 +3530,7 @@ python-versions = "*"
 name = "pywin32"
 version = "302"
 description = "Python for Window Extensions"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3485,7 +3538,7 @@ python-versions = "*"
 name = "pywin32-ctypes"
 version = "0.2.0"
 description = ""
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3493,7 +3546,7 @@ python-versions = "*"
 name = "pyxdg"
 version = "0.27"
 description = "PyXDG contains implementations of freedesktop.org standards in python."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3509,7 +3562,7 @@ python-versions = ">=3.6"
 name = "pyzmq"
 version = "22.3.0"
 description = "Python bindings for 0MQ"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3521,7 +3574,7 @@ py = {version = "*", markers = "implementation_name == \"pypy\""}
 name = "qdarkstyle"
 version = "3.0.2"
 description = "The most complete dark/light style sheet for C++/Python and Qt applications"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3537,7 +3590,7 @@ example = ["pyqt5", "pyside2"]
 name = "qstylizer"
 version = "0.2.1"
 description = "Stylesheet Generator for PyQt{4-5}/PySide{1-2}"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3553,7 +3606,7 @@ test = ["pytest (>=6,<7)", "pytest-mock (>=3,<4)", "pytest-catchlog (>=1,<2)"]
 name = "qtawesome"
 version = "1.1.1"
 description = "FontAwesome icons in PyQt and PySide applications"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3564,7 +3617,7 @@ qtpy = "*"
 name = "qtconsole"
 version = "5.2.1"
 description = "Jupyter Qt console"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">= 3.6"
 
@@ -3586,7 +3639,7 @@ test = ["flaky", "pytest", "pytest-qt"]
 name = "qtpy"
 version = "1.11.3"
 description = "Provides an abstraction layer on top of the various Qt bindings (PyQt5, PyQt4 and PySide) and additional custom QWidgets."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
 
@@ -3627,7 +3680,7 @@ rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 name = "rope"
 version = "0.22.0"
 description = "a python refactoring library..."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3649,15 +3702,29 @@ pyasn1 = ">=0.1.3"
 name = "rtree"
 version = "0.9.7"
 description = "R-Tree spatial index for Python GIS"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
+
+[[package]]
+name = "s3transfer"
+version = "0.5.0"
+description = "An Amazon S3 Transfer Manager"
+category = "main"
+optional = true
+python-versions = ">= 3.6"
+
+[package.dependencies]
+botocore = ">=1.12.36,<2.0a.0"
+
+[package.extras]
+crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
 
 [[package]]
 name = "secretstorage"
 version = "3.3.1"
 description = "Python bindings to FreeDesktop.org Secret Service API"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3737,7 +3804,7 @@ python-versions = ">=3.6"
 name = "snowballstemmer"
 version = "2.2.0"
 description = "This package provides 29 stemmers for 28 languages generated from Snowball algorithms."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3745,7 +3812,7 @@ python-versions = "*"
 name = "sortedcontainers"
 version = "2.4.0"
 description = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3753,7 +3820,7 @@ python-versions = "*"
 name = "sphinx"
 version = "4.3.1"
 description = "Python documentation generator"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3784,7 +3851,7 @@ test = ["pytest", "pytest-cov", "html5lib", "cython", "typed-ast"]
 name = "sphinxcontrib-applehelp"
 version = "1.0.2"
 description = "sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -3796,7 +3863,7 @@ test = ["pytest"]
 name = "sphinxcontrib-devhelp"
 version = "1.0.2"
 description = "sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -3808,7 +3875,7 @@ test = ["pytest"]
 name = "sphinxcontrib-htmlhelp"
 version = "2.0.0"
 description = "sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3820,7 +3887,7 @@ test = ["pytest", "html5lib"]
 name = "sphinxcontrib-jsmath"
 version = "1.0.1"
 description = "A sphinx extension which renders display math in HTML via JavaScript"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -3831,7 +3898,7 @@ test = ["pytest", "flake8", "mypy"]
 name = "sphinxcontrib-qthelp"
 version = "1.0.3"
 description = "sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -3843,7 +3910,7 @@ test = ["pytest"]
 name = "sphinxcontrib-serializinghtml"
 version = "1.1.5"
 description = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -3855,7 +3922,7 @@ test = ["pytest"]
 name = "spyder"
 version = "5.1.5"
 description = "The Scientific Python Development Environment"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -3906,7 +3973,7 @@ test = ["coverage", "cython", "flaky", "matplotlib", "pandas", "pillow", "pytest
 name = "spyder-kernels"
 version = "2.1.3"
 description = "Jupyter kernels for Spyder's console"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -3988,10 +4055,18 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "termcolor"
+version = "1.1.0"
+description = "ANSII Color formatting for output in terminal."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "testpath"
 version = "0.5.0"
 description = "Test utilities for code working with files and commands"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">= 3.5"
 
@@ -4002,7 +4077,7 @@ test = ["pytest", "pathlib2"]
 name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -4010,7 +4085,7 @@ python-versions = "*"
 name = "textdistance"
 version = "4.2.2"
 description = "Compute distance between the two texts."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -4032,7 +4107,7 @@ test = ["hypothesis", "isort", "numpy", "pytest"]
 name = "three-merge"
 version = "0.1.1"
 description = "Simple library for merging two strings with respect to a base one"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -4046,7 +4121,7 @@ test = ["pytest", "pytest-cov", "flaky", "pytest-timeout"]
 name = "tinycss2"
 version = "1.1.1"
 description = "A tiny CSS parser"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -4061,7 +4136,7 @@ test = ["pytest", "pytest-cov", "pytest-flake8", "pytest-isort", "coverage"]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
@@ -4088,7 +4163,7 @@ typing-extensions = "*"
 name = "tornado"
 version = "6.1"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">= 3.5"
 
@@ -4112,7 +4187,7 @@ telegram = ["requests"]
 name = "traitlets"
 version = "5.1.1"
 description = "Traitlets Python configuration system"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.7"
 
@@ -4123,7 +4198,7 @@ test = ["pytest"]
 name = "typed-ast"
 version = "1.4.3"
 description = "a fork of Python 2 and 3 ast modules with type comment support"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -4139,7 +4214,7 @@ python-versions = ">=3.6"
 name = "ujson"
 version = "4.3.0"
 description = "Ultra fast JSON encoder and decoder for Python"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -4158,7 +4233,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "wandb"
-version = "0.12.1"
+version = "0.12.7"
 description = "A CLI and library for interacting with the Weights and Biases API."
 category = "main"
 optional = false
@@ -4180,21 +4255,22 @@ sentry-sdk = ">=1.0.0"
 shortuuid = ">=0.5.0"
 six = ">=1.13.0"
 subprocess32 = ">=3.5.3"
+yaspin = ">=1.0.0"
 
 [package.extras]
 aws = ["boto3"]
 gcp = ["google-cloud-storage"]
-grpc = ["grpcio (==1.27.2)"]
 kubeflow = ["kubernetes", "minio", "google-cloud-storage", "sh"]
-launch = ["docker", "jupyter-repo2docker", "chardet", "iso8601"]
-media = ["numpy", "moviepy", "pillow", "bokeh", "soundfile", "plotly"]
+launch = ["jupyter-repo2docker", "nbconvert", "chardet", "iso8601", "typing-extensions", "yaspin"]
+media = ["numpy", "moviepy", "pillow", "bokeh", "soundfile", "plotly", "rdkit-pypi"]
+service = ["grpcio (>=1.27.2)", "setproctitle"]
 sweeps = ["numpy (>=1.15,<1.21)", "scipy (>=1.5.4)", "pyyaml", "scikit-learn (==0.24.1)", "jsonschema (>=3.2.0)", "jsonref (>=0.2)", "pydantic (>=1.8.2)"]
 
 [[package]]
 name = "watchdog"
 version = "2.1.6"
 description = "Filesystem events monitoring"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.6"
 
@@ -4205,7 +4281,7 @@ watchmedo = ["PyYAML (>=3.10)"]
 name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -4213,7 +4289,7 @@ python-versions = "*"
 name = "webencodings"
 version = "0.5.1"
 description = "Character encoding aliases for legacy web content"
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -4232,7 +4308,7 @@ watchdog = ["watchdog"]
 name = "wrapt"
 version = "1.12.1"
 description = "Module for decorators, wrappers and monkey patching."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
 
@@ -4240,7 +4316,7 @@ python-versions = "*"
 name = "wurlitzer"
 version = "3.0.2"
 description = "Capture C-level output in context managers"
-category = "dev"
+category = "main"
 optional = true
 python-versions = ">=3.5"
 
@@ -4248,9 +4324,20 @@ python-versions = ">=3.5"
 name = "yapf"
 version = "0.31.0"
 description = "A formatter for Python code."
-category = "dev"
+category = "main"
 optional = true
 python-versions = "*"
+
+[[package]]
+name = "yaspin"
+version = "2.1.0"
+description = "Yet Another Terminal Spinner"
+category = "main"
+optional = false
+python-versions = ">=3.6.2,<4.0.0"
+
+[package.dependencies]
+termcolor = ">=1.1.0,<2.0.0"
 
 [[package]]
 name = "zipp"
@@ -4266,14 +4353,15 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 
 [extras]
 atari = ["ale-py", "AutoROM"]
+launcha = ["launcha"]
 mujoco = ["free-mujoco-py"]
 pybullet = ["pybullet"]
-spyder = []
+spyder = ["spyder"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7.1,<3.10"
-content-hash = "89a2d7117a4b07cb2444ef8cc527ce4be0a8915244554ca484928ee9c0c92519"
+content-hash = "088bc0ff69f84d1c7ea82c9350d7f672f38e6d079ad68c0ad7454f4871590c22"
 
 [metadata.files]
 absl-py = [
@@ -4379,6 +4467,14 @@ black = [
 bleach = [
     {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},
     {file = "bleach-4.1.0.tar.gz", hash = "sha256:0900d8b37eba61a802ee40ac0061f8c2b5dee29c1927dd1d233e075ebf5a71da"},
+]
+boto3 = [
+    {file = "boto3-1.20.23-py3-none-any.whl", hash = "sha256:76b3ee0d1dd860c9218bc864cd29f1ee986f6e1e75e8669725dd3c411039379e"},
+    {file = "boto3-1.20.23.tar.gz", hash = "sha256:c39cb6ed376ba1d4689ac8f6759a2b2d8a0b0424dbec0cd3af1558079bcf06e8"},
+]
+botocore = [
+    {file = "botocore-1.23.23-py3-none-any.whl", hash = "sha256:7459766c4594f3b8877e8013f93f0dc6c6486acbeb7d9c9ae488396529cc2e84"},
+    {file = "botocore-1.23.23.tar.gz", hash = "sha256:640b62110aa6d1c25553eceafb5bcd89aedeb84b191598d1f6492ad24374d285"},
 ]
 cachetools = [
     {file = "cachetools-4.2.4-py3-none-any.whl", hash = "sha256:92971d3cb7d2a97efff7c7bb1657f21a8f5fb309a37530537c71b1774189f2d1"},
@@ -4729,6 +4825,10 @@ jinja2-time = [
     {file = "jinja2-time-0.2.0.tar.gz", hash = "sha256:d14eaa4d315e7688daa4969f616f226614350c48730bfa1692d2caebd8c90d40"},
     {file = "jinja2_time-0.2.0-py2.py3-none-any.whl", hash = "sha256:d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa"},
 ]
+jmespath = [
+    {file = "jmespath-0.10.0-py2.py3-none-any.whl", hash = "sha256:cdf6525904cc597730141d61b36f2e4b8ecc257c420fa2f4549bac2c2d0cb72f"},
+    {file = "jmespath-0.10.0.tar.gz", hash = "sha256:b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"},
+]
 jsonschema = [
     {file = "jsonschema-4.2.1-py3-none-any.whl", hash = "sha256:2a0f162822a64d95287990481b45d82f096e99721c86534f48201b64ebca6e8c"},
     {file = "jsonschema-4.2.1.tar.gz", hash = "sha256:390713469ae64b8a58698bb3cbc3859abe6925b565a973f87323ef21b09a27a8"},
@@ -4794,6 +4894,10 @@ kiwisolver = [
     {file = "kiwisolver-1.3.2-pp37-pypy37_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:25405f88a37c5f5bcba01c6e350086d65e7465fd1caaf986333d2a045045a223"},
     {file = "kiwisolver-1.3.2-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:bcadb05c3d4794eb9eee1dddf1c24215c92fb7b55a80beae7a60530a91060560"},
     {file = "kiwisolver-1.3.2.tar.gz", hash = "sha256:fc4453705b81d03568d5b808ad8f09c77c47534f6ac2e72e733f9ca4714aa75c"},
+]
+launcha = [
+    {file = "launcha-0.0.1-py3-none-any.whl", hash = "sha256:b3319f2db9c0c4564bdb9a2d062736d60d1ec40ed4692fab85e374addc18706f"},
+    {file = "launcha-0.0.1.tar.gz", hash = "sha256:be3032546bfb7a5785d9b373fa5d5f6e51fd757988a206934bd12cc5173210e9"},
 ]
 lazy-object-proxy = [
     {file = "lazy-object-proxy-1.6.0.tar.gz", hash = "sha256:489000d368377571c6f982fba6497f2aa13c6d1facc40660963da62f5c379726"},
@@ -6258,6 +6362,10 @@ rtree = [
     {file = "Rtree-0.9.7-cp39-cp39-win_amd64.whl", hash = "sha256:824a7e4639665a32ffdfd28aa8b090a1dee60fa254f81317634362740be0b2d1"},
     {file = "Rtree-0.9.7.tar.gz", hash = "sha256:be8772ca34699a9ad3fb4cfe2cfb6629854e453c10b3328039301bbfc128ca3e"},
 ]
+s3transfer = [
+    {file = "s3transfer-0.5.0-py3-none-any.whl", hash = "sha256:9c1dc369814391a6bda20ebbf4b70a0f34630592c9aa520856bf384916af2803"},
+    {file = "s3transfer-0.5.0.tar.gz", hash = "sha256:50ed823e1dc5868ad40c8dc92072f757aa0e653a192845c94a3b676f4a62da4c"},
+]
 secretstorage = [
     {file = "SecretStorage-3.3.1-py3-none-any.whl", hash = "sha256:422d82c36172d88d6a0ed5afdec956514b189ddbfb72fefab0c8a1cee4eaf71f"},
     {file = "SecretStorage-3.3.1.tar.gz", hash = "sha256:fd666c51a6bf200643495a04abb261f83229dcb6fd8472ec393df7ffc8b6f195"},
@@ -6345,6 +6453,9 @@ tensorboard-data-server = [
 ]
 tensorboard-plugin-wit = [
     {file = "tensorboard_plugin_wit-1.8.0-py3-none-any.whl", hash = "sha256:2a80d1c551d741e99b2f197bb915d8a133e24adb8da1732b840041860f91183a"},
+]
+termcolor = [
+    {file = "termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"},
 ]
 testpath = [
     {file = "testpath-0.5.0-py3-none-any.whl", hash = "sha256:8044f9a0bab6567fc644a3593164e872543bb44225b0e24846e2c89237937589"},
@@ -6530,8 +6641,8 @@ urllib3 = [
     {file = "urllib3-1.26.7.tar.gz", hash = "sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"},
 ]
 wandb = [
-    {file = "wandb-0.12.1-py2.py3-none-any.whl", hash = "sha256:723e81cca072def483422b9ae45d5c1b5c8f2d011dc5c85c8891696f8504a55e"},
-    {file = "wandb-0.12.1.tar.gz", hash = "sha256:739f205b5c9a5bc25e742f1c707e65322cd6aafba8ec64299e5757f992f34be3"},
+    {file = "wandb-0.12.7-py2.py3-none-any.whl", hash = "sha256:92e5a89e681cfffe70b31c0645f6ca20668d3211951a1db01a39687ca39e05f4"},
+    {file = "wandb-0.12.7.tar.gz", hash = "sha256:d1c2a6cd3fc57b5a75ff18d4bb69f088d0bd1d0ad22c98005a37e037c85442c7"},
 ]
 watchdog = [
     {file = "watchdog-2.1.6-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9693f35162dc6208d10b10ddf0458cc09ad70c30ba689d9206e02cd836ce28a3"},
@@ -6580,6 +6691,10 @@ wurlitzer = [
 yapf = [
     {file = "yapf-0.31.0-py2.py3-none-any.whl", hash = "sha256:e3a234ba8455fe201eaa649cdac872d590089a18b661e39bbac7020978dd9c2e"},
     {file = "yapf-0.31.0.tar.gz", hash = "sha256:408fb9a2b254c302f49db83c59f9aa0b4b0fd0ec25be3a5c51181327922ff63d"},
+]
+yaspin = [
+    {file = "yaspin-2.1.0-py3-none-any.whl", hash = "sha256:d574cbfaf0a349df466c91f7f81b22460ae5ebb15ecb8bf9411d6049923aee8d"},
+    {file = "yaspin-2.1.0.tar.gz", hash = "sha256:c8d34eca9fda3f4dfbe59f57f3cf0f3641af3eefbf1544fbeb9b3bacf82c580a"},
 ]
 zipp = [
     {file = "zipp-3.6.0-py3-none-any.whl", hash = "sha256:9fe5ea21568a0a70e50f273397638d39b03353731e6cbbb3fd8502a33fec40bc"},
