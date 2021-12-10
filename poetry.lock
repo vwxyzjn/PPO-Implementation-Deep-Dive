@@ -14,7 +14,7 @@ name = "alabaster"
 version = "0.7.12"
 description = "A configurable sidebar-enabled Sphinx theme"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -38,7 +38,7 @@ name = "applaunchservices"
 version = "0.2.1"
 description = "Simple package for registering an app with apple Launch Services to handle UTI and URL"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -49,7 +49,7 @@ name = "appnope"
 version = "0.1.2"
 description = "Disable App Nap on macOS >= 10.9"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -57,7 +57,7 @@ name = "argcomplete"
 version = "1.12.3"
 description = "Bash tab completion for argparse"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -71,7 +71,7 @@ name = "arrow"
 version = "1.2.1"
 description = "Better dates & times for Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -83,7 +83,7 @@ name = "astroid"
 version = "2.6.6"
 description = "An abstract syntax tree for Python with inference support."
 category = "dev"
-optional = false
+optional = true
 python-versions = "~=3.6"
 
 [package.dependencies]
@@ -109,7 +109,7 @@ name = "atomicwrites"
 version = "1.4.0"
 description = "Atomic file writes."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -117,7 +117,7 @@ name = "attrs"
 version = "21.2.0"
 description = "Classes Without Boilerplate"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.extras]
@@ -131,7 +131,7 @@ name = "autopep8"
 version = "1.5.7"
 description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -178,7 +178,7 @@ name = "babel"
 version = "2.9.1"
 description = "Internationalization utilities"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.dependencies]
@@ -189,7 +189,7 @@ name = "backcall"
 version = "0.2.0"
 description = "Specifications for callback functions passed in to an API"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -197,7 +197,7 @@ name = "bcrypt"
 version = "3.2.0"
 description = "Modern password hashing for your software and your servers"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -213,7 +213,7 @@ name = "binaryornot"
 version = "0.4.4"
 description = "Ultra-lightweight pure Python package to check if a file is binary or text."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -224,7 +224,7 @@ name = "black"
 version = "21.12b0"
 description = "The uncompromising code formatter."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6.2"
 
 [package.dependencies]
@@ -248,7 +248,7 @@ name = "bleach"
 version = "4.1.0"
 description = "An easy safelist-based HTML-sanitizing tool."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -276,8 +276,8 @@ python-versions = "*"
 name = "cffi"
 version = "1.15.0"
 description = "Foreign Function Interface for Python calling C code."
-category = "dev"
-optional = false
+category = "main"
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -288,7 +288,7 @@ name = "chardet"
 version = "4.0.0"
 description = "Universal encoding detector for Python 2 and 3"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
@@ -347,7 +347,7 @@ name = "cookiecutter"
 version = "1.7.3"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.dependencies]
@@ -365,7 +365,7 @@ name = "cryptography"
 version = "36.0.0"
 description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -388,11 +388,19 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "cython"
+version = "0.29.25"
+description = "The Cython compiler for writing C extensions for the Python language."
+category = "main"
+optional = true
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
 name = "debugpy"
 version = "1.5.1"
 description = "An implementation of the Debug Adapter Protocol for Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 
 [[package]]
@@ -400,7 +408,7 @@ name = "decorator"
 version = "5.1.0"
 description = "Decorators for Humans"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -408,7 +416,7 @@ name = "defusedxml"
 version = "0.7.1"
 description = "XML bomb protection for Python stdlib modules"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
@@ -416,7 +424,7 @@ name = "diff-match-patch"
 version = "20200713"
 description = "Repackaging of Google's Diff Match and Patch libraries. Offers robust algorithms to perform the operations required for synchronizing plain text."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7"
 
 [[package]]
@@ -435,7 +443,7 @@ name = "docutils"
 version = "0.17.1"
 description = "Docutils -- Python Documentation Utilities"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
@@ -443,15 +451,27 @@ name = "entrypoints"
 version = "0.3"
 description = "Discover and load entry points from installed packages."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7"
+
+[[package]]
+name = "fasteners"
+version = "0.15"
+description = "A python package that provides useful locks."
+category = "main"
+optional = true
+python-versions = "*"
+
+[package.dependencies]
+monotonic = ">=0.1"
+six = "*"
 
 [[package]]
 name = "flake8"
 version = "3.9.2"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
-optional = false
+optional = true
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [package.dependencies]
@@ -482,6 +502,22 @@ unicode = ["unicodedata2 (>=13.0.0)"]
 woff = ["zopfli (>=0.1.4)", "brotlicffi (>=0.8.0)", "brotli (>=1.0.1)"]
 
 [[package]]
+name = "free-mujoco-py"
+version = "2.1.6"
+description = ""
+category = "main"
+optional = true
+python-versions = ">=3.7.1,<3.11"
+
+[package.dependencies]
+cffi = ">=1.15.0,<2.0.0"
+Cython = ">=0.29.24,<0.30.0"
+fasteners = "0.15"
+glfw = ">=1.4.0,<2.0.0"
+imageio = ">=2.9.0,<3.0.0"
+numpy = ">=1.21.3,<2.0.0"
+
+[[package]]
 name = "gitdb"
 version = "4.0.9"
 description = "Git Object Database"
@@ -503,6 +539,14 @@ python-versions = ">=3.7"
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
 typing-extensions = {version = ">=3.7.4.3", markers = "python_version < \"3.10\""}
+
+[[package]]
+name = "glfw"
+version = "1.12.0"
+description = "A ctypes-based wrapper for GLFW3."
+category = "main"
+optional = true
+python-versions = "*"
 
 [[package]]
 name = "google-auth"
@@ -586,11 +630,36 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "imageio"
+version = "2.13.3"
+description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
+category = "main"
+optional = true
+python-versions = ">=3.5"
+
+[package.dependencies]
+numpy = "*"
+pillow = ">=8.3.2"
+
+[package.extras]
+build = ["wheel"]
+dev = ["invoke", "pytest", "pytest-cov", "black", "flake8"]
+docs = ["sphinx", "numpydoc", "pydata-sphinx-theme"]
+ffmpeg = ["imageio-ffmpeg", "psutil"]
+fits = ["astropy"]
+full = ["astropy", "black", "flake8", "gdal", "imageio-ffmpeg", "invoke", "itk", "numpydoc", "psutil", "pydata-sphinx-theme", "pytest", "pytest-cov", "sphinx", "tifffile", "wheel"]
+gdal = ["gdal"]
+itk = ["itk"]
+linting = ["black", "flake8"]
+test = ["invoke", "pytest", "pytest-cov"]
+tifffile = ["tifffile"]
+
+[[package]]
 name = "imagesize"
 version = "1.3.0"
 description = "Getting image size from png/jpeg/jpeg2000/gif file"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -615,7 +684,7 @@ name = "importlib-resources"
 version = "5.4.0"
 description = "Read resources from Python packages"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -630,7 +699,7 @@ name = "inflection"
 version = "0.5.1"
 description = "A port of Ruby on Rails inflector to Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -638,7 +707,7 @@ name = "intervaltree"
 version = "3.1.0"
 description = "Editable interval tree data structure for Python 2 and 3"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -649,7 +718,7 @@ name = "ipykernel"
 version = "6.6.0"
 description = "IPython Kernel for Jupyter"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -671,7 +740,7 @@ name = "ipython"
 version = "7.30.1"
 description = "IPython: Productive Interactive Computing"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -703,7 +772,7 @@ name = "ipython-genutils"
 version = "0.2.0"
 description = "Vestigial utilities from IPython"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -711,7 +780,7 @@ name = "isort"
 version = "5.10.1"
 description = "A Python utility / library to sort Python imports."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6.1,<4.0"
 
 [package.extras]
@@ -725,7 +794,7 @@ name = "jedi"
 version = "0.18.1"
 description = "An autocompletion tool for Python that can be used for text editors."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -740,7 +809,7 @@ name = "jeepney"
 version = "0.7.1"
 description = "Low-level, pure Python DBus protocol wrapper."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -752,7 +821,7 @@ name = "jinja2"
 version = "3.0.3"
 description = "A very fast and expressive template engine."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -766,7 +835,7 @@ name = "jinja2-time"
 version = "0.2.0"
 description = "Jinja2 Extension for Dates and Times"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -778,7 +847,7 @@ name = "jsonschema"
 version = "4.2.1"
 description = "An implementation of JSON Schema validation for Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -796,7 +865,7 @@ name = "jupyter-client"
 version = "6.2.0"
 description = "Jupyter protocol implementation and client libraries"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6.1"
 
 [package.dependencies]
@@ -816,7 +885,7 @@ name = "jupyter-core"
 version = "4.9.1"
 description = "Jupyter core package. A base package on which Jupyter projects rely."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -828,7 +897,7 @@ name = "jupyterlab-pygments"
 version = "0.1.2"
 description = "Pygments theme using JupyterLab CSS variables"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -839,7 +908,7 @@ name = "keyring"
 version = "23.4.0"
 description = "Store and access your passwords safely."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -865,7 +934,7 @@ name = "lazy-object-proxy"
 version = "1.6.0"
 description = "A fast and thorough lazy object proxy."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [[package]]
@@ -887,7 +956,7 @@ name = "markupsafe"
 version = "2.0.1"
 description = "Safely add untrusted strings to HTML/XML markup."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [[package]]
@@ -914,7 +983,7 @@ name = "matplotlib-inline"
 version = "0.1.3"
 description = "Inline Matplotlib backend for Jupyter"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.dependencies]
@@ -925,7 +994,7 @@ name = "mccabe"
 version = "0.6.1"
 description = "McCabe checker, plugin for flake8"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -933,7 +1002,15 @@ name = "mistune"
 version = "0.8.4"
 description = "The fastest markdown parser in pure Python"
 category = "dev"
-optional = false
+optional = true
+python-versions = "*"
+
+[[package]]
+name = "monotonic"
+version = "1.6"
+description = "An implementation of time.monotonic() for Python 2 & < 3.3"
+category = "main"
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -941,7 +1018,7 @@ name = "mypy-extensions"
 version = "0.4.3"
 description = "Experimental type system extensions for programs checked with the mypy typechecker."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -949,7 +1026,7 @@ name = "nbclient"
 version = "0.5.9"
 description = "A client library for executing notebooks. Formerly nbconvert's ExecutePreprocessor."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6.1"
 
 [package.dependencies]
@@ -968,7 +1045,7 @@ name = "nbconvert"
 version = "6.3.0"
 description = "Converting Jupyter Notebooks"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -998,7 +1075,7 @@ name = "nbformat"
 version = "5.1.3"
 description = "The Jupyter Notebook format"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.dependencies]
@@ -1016,7 +1093,7 @@ name = "nest-asyncio"
 version = "1.5.4"
 description = "Patch asyncio to allow nested event loops"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -1032,7 +1109,7 @@ name = "numpydoc"
 version = "1.1.0"
 description = "Sphinx extension to support docstrings in Numpy format"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.dependencies]
@@ -1102,7 +1179,7 @@ name = "pandocfilters"
 version = "1.5.0"
 description = "Utilities for writing pandoc filters in python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -1110,7 +1187,7 @@ name = "paramiko"
 version = "2.8.1"
 description = "SSH2 protocol library"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -1129,7 +1206,7 @@ name = "parso"
 version = "0.8.3"
 description = "A Python Parser"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -1141,7 +1218,7 @@ name = "pathspec"
 version = "0.9.0"
 description = "Utility library for gitignore style pattern matching of file paths."
 category = "dev"
-optional = false
+optional = true
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [[package]]
@@ -1157,7 +1234,7 @@ name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -1168,7 +1245,7 @@ name = "pickleshare"
 version = "0.7.5"
 description = "Tiny 'shelve'-like database with concurrency support"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -1184,7 +1261,7 @@ name = "platformdirs"
 version = "2.4.0"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -1196,7 +1273,7 @@ name = "pluggy"
 version = "1.0.0"
 description = "plugin and hook calling mechanisms for python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1211,7 +1288,7 @@ name = "poyo"
 version = "0.5.0"
 description = "A lightweight YAML Parser for Python. 🐓"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -1230,10 +1307,10 @@ test = ["pytest (>=2.7.3)", "pytest-cov", "coveralls", "futures", "pytest-benchm
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.23"
+version = "3.0.24"
 description = "Library for building powerful interactive command lines in Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6.2"
 
 [package.dependencies]
@@ -1263,7 +1340,7 @@ name = "ptyprocess"
 version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -1271,7 +1348,7 @@ name = "py"
 version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
@@ -1306,15 +1383,15 @@ name = "pycodestyle"
 version = "2.7.0"
 description = "Python style guide checker"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pycparser"
 version = "2.21"
 description = "C parser in Python"
-category = "dev"
-optional = false
+category = "main"
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -1322,7 +1399,7 @@ name = "pydocstyle"
 version = "6.1.1"
 description = "Python docstring style checker"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1336,7 +1413,7 @@ name = "pyflakes"
 version = "2.3.1"
 description = "passive checker of Python programs"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -1352,7 +1429,7 @@ name = "pygments"
 version = "2.10.0"
 description = "Pygments is a syntax highlighting package written in Python."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -1360,7 +1437,7 @@ name = "pylint"
 version = "2.9.6"
 description = "python code static checker"
 category = "dev"
-optional = false
+optional = true
 python-versions = "~=3.6"
 
 [package.dependencies]
@@ -1375,7 +1452,7 @@ name = "pyls-spyder"
 version = "0.4.0"
 description = "Spyder extensions for the python-lsp-server"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">= 3.6"
 
 [package.dependencies]
@@ -1386,7 +1463,7 @@ name = "pynacl"
 version = "1.4.0"
 description = "Python binding to the Networking and Cryptography (NaCl) library"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.dependencies]
@@ -1402,7 +1479,7 @@ name = "pyobjc"
 version = "8.1"
 description = "Python<->ObjC Interoperability Module"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1554,7 +1631,7 @@ name = "pyobjc-core"
 version = "8.1"
 description = "Python<->ObjC Interoperability Module"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [[package]]
@@ -1562,7 +1639,7 @@ name = "pyobjc-framework-accessibility"
 version = "8.1"
 description = "Wrappers for the framework Accessibility on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1575,7 +1652,7 @@ name = "pyobjc-framework-accounts"
 version = "8.1"
 description = "Wrappers for the framework Accounts on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1587,7 +1664,7 @@ name = "pyobjc-framework-addressbook"
 version = "8.1"
 description = "Wrappers for the framework AddressBook on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1599,7 +1676,7 @@ name = "pyobjc-framework-adservices"
 version = "8.1"
 description = "Wrappers for the framework AdServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1611,7 +1688,7 @@ name = "pyobjc-framework-adsupport"
 version = "8.1"
 description = "Wrappers for the framework AdSupport on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1623,7 +1700,7 @@ name = "pyobjc-framework-applescriptkit"
 version = "8.1"
 description = "Wrappers for the framework AppleScriptKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1635,7 +1712,7 @@ name = "pyobjc-framework-applescriptobjc"
 version = "8.1"
 description = "Wrappers for the framework AppleScriptObjC on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1647,7 +1724,7 @@ name = "pyobjc-framework-applicationservices"
 version = "8.1"
 description = "Wrappers for the framework ApplicationServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1660,7 +1737,7 @@ name = "pyobjc-framework-apptrackingtransparency"
 version = "8.1"
 description = "Wrappers for the framework AppTrackingTransparency on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1672,7 +1749,7 @@ name = "pyobjc-framework-audiovideobridging"
 version = "8.1"
 description = "Wrappers for the framework AudioVideoBridging on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1684,7 +1761,7 @@ name = "pyobjc-framework-authenticationservices"
 version = "8.1"
 description = "Wrappers for the framework AuthenticationServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1696,7 +1773,7 @@ name = "pyobjc-framework-automaticassessmentconfiguration"
 version = "8.1"
 description = "Wrappers for the framework AutomaticAssessmentConfiguration on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1708,7 +1785,7 @@ name = "pyobjc-framework-automator"
 version = "8.1"
 description = "Wrappers for the framework Automator on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1720,7 +1797,7 @@ name = "pyobjc-framework-avfoundation"
 version = "8.1"
 description = "Wrappers for the framework AVFoundation on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1735,7 +1812,7 @@ name = "pyobjc-framework-avkit"
 version = "8.1"
 description = "Wrappers for the framework AVKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1748,7 +1825,7 @@ name = "pyobjc-framework-businesschat"
 version = "8.1"
 description = "Wrappers for the framework BusinessChat on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1760,7 +1837,7 @@ name = "pyobjc-framework-calendarstore"
 version = "8.1"
 description = "Wrappers for the framework CalendarStore on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1772,7 +1849,7 @@ name = "pyobjc-framework-callkit"
 version = "8.1"
 description = "Wrappers for the framework CallKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1784,7 +1861,7 @@ name = "pyobjc-framework-cfnetwork"
 version = "8.1"
 description = "Wrappers for the framework CFNetwork on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1796,7 +1873,7 @@ name = "pyobjc-framework-classkit"
 version = "8.1"
 description = "Wrappers for the framework ClassKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1808,7 +1885,7 @@ name = "pyobjc-framework-cloudkit"
 version = "8.1"
 description = "Wrappers for the framework CloudKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1823,7 +1900,7 @@ name = "pyobjc-framework-cocoa"
 version = "8.1"
 description = "Wrappers for the Cocoa frameworks on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1834,7 +1911,7 @@ name = "pyobjc-framework-collaboration"
 version = "8.1"
 description = "Wrappers for the framework Collaboration on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1846,7 +1923,7 @@ name = "pyobjc-framework-colorsync"
 version = "8.1"
 description = "Wrappers for the framework ColorSync on Mac OS X"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1858,7 +1935,7 @@ name = "pyobjc-framework-contacts"
 version = "8.1"
 description = "Wrappers for the framework Contacts on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1870,7 +1947,7 @@ name = "pyobjc-framework-contactsui"
 version = "8.1"
 description = "Wrappers for the framework ContactsUI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1883,7 +1960,7 @@ name = "pyobjc-framework-coreaudio"
 version = "8.1"
 description = "Wrappers for the framework CoreAudio on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1895,7 +1972,7 @@ name = "pyobjc-framework-coreaudiokit"
 version = "8.1"
 description = "Wrappers for the framework CoreAudioKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1908,7 +1985,7 @@ name = "pyobjc-framework-corebluetooth"
 version = "8.1"
 description = "Wrappers for the framework CoreBluetooth on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1920,7 +1997,7 @@ name = "pyobjc-framework-coredata"
 version = "8.1"
 description = "Wrappers for the framework CoreData on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1932,7 +2009,7 @@ name = "pyobjc-framework-corehaptics"
 version = "8.1"
 description = "Wrappers for the framework CoreHaptics on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1944,7 +2021,7 @@ name = "pyobjc-framework-corelocation"
 version = "8.1"
 description = "Wrappers for the framework CoreLocation on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1956,7 +2033,7 @@ name = "pyobjc-framework-coremedia"
 version = "8.1"
 description = "Wrappers for the framework CoreMedia on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1968,7 +2045,7 @@ name = "pyobjc-framework-coremediaio"
 version = "8.1"
 description = "Wrappers for the framework CoreMediaIO on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1980,7 +2057,7 @@ name = "pyobjc-framework-coremidi"
 version = "8.1"
 description = "Wrappers for the framework CoreMIDI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1992,7 +2069,7 @@ name = "pyobjc-framework-coreml"
 version = "8.1"
 description = "Wrappers for the framework CoreML on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2004,7 +2081,7 @@ name = "pyobjc-framework-coremotion"
 version = "8.1"
 description = "Wrappers for the framework CoreMotion on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2016,7 +2093,7 @@ name = "pyobjc-framework-coreservices"
 version = "8.1"
 description = "Wrappers for the framework CoreServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2028,7 +2105,7 @@ name = "pyobjc-framework-corespotlight"
 version = "8.1"
 description = "Wrappers for the framework CoreSpotlight on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2040,7 +2117,7 @@ name = "pyobjc-framework-coretext"
 version = "8.1"
 description = "Wrappers for the framework CoreText on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2053,7 +2130,7 @@ name = "pyobjc-framework-corewlan"
 version = "8.1"
 description = "Wrappers for the framework CoreWLAN on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2065,7 +2142,7 @@ name = "pyobjc-framework-cryptotokenkit"
 version = "8.1"
 description = "Wrappers for the framework CryptoTokenKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2077,7 +2154,7 @@ name = "pyobjc-framework-datadetection"
 version = "8.1"
 description = "Wrappers for the framework DataDetection on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2089,7 +2166,7 @@ name = "pyobjc-framework-devicecheck"
 version = "8.1"
 description = "Wrappers for the framework DeviceCheck on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2101,7 +2178,7 @@ name = "pyobjc-framework-dictionaryservices"
 version = "8.1"
 description = "Wrappers for the framework DictionaryServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2113,7 +2190,7 @@ name = "pyobjc-framework-discrecording"
 version = "8.1"
 description = "Wrappers for the framework DiscRecording on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2125,7 +2202,7 @@ name = "pyobjc-framework-discrecordingui"
 version = "8.1"
 description = "Wrappers for the framework DiscRecordingUI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2138,7 +2215,7 @@ name = "pyobjc-framework-diskarbitration"
 version = "8.1"
 description = "Wrappers for the framework DiskArbitration on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2150,7 +2227,7 @@ name = "pyobjc-framework-dvdplayback"
 version = "8.1"
 description = "Wrappers for the framework DVDPlayback on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2162,7 +2239,7 @@ name = "pyobjc-framework-eventkit"
 version = "8.1"
 description = "Wrappers for the framework Accounts on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2174,7 +2251,7 @@ name = "pyobjc-framework-exceptionhandling"
 version = "8.1"
 description = "Wrappers for the framework ExceptionHandling on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2186,7 +2263,7 @@ name = "pyobjc-framework-executionpolicy"
 version = "8.1"
 description = "Wrappers for the framework ExecutionPolicy on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2198,7 +2275,7 @@ name = "pyobjc-framework-externalaccessory"
 version = "8.1"
 description = "Wrappers for the framework ExternalAccessory on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2210,7 +2287,7 @@ name = "pyobjc-framework-fileprovider"
 version = "8.1"
 description = "Wrappers for the framework FileProvider on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2222,7 +2299,7 @@ name = "pyobjc-framework-fileproviderui"
 version = "8.1"
 description = "Wrappers for the framework FileProviderUI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2234,7 +2311,7 @@ name = "pyobjc-framework-findersync"
 version = "8.1"
 description = "Wrappers for the framework FinderSync on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2246,7 +2323,7 @@ name = "pyobjc-framework-fsevents"
 version = "8.1"
 description = "Wrappers for the framework FSEvents on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2258,7 +2335,7 @@ name = "pyobjc-framework-gamecenter"
 version = "8.1"
 description = "Wrappers for the framework GameCenter on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2270,7 +2347,7 @@ name = "pyobjc-framework-gamecontroller"
 version = "8.1"
 description = "Wrappers for the framework GameController on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2282,7 +2359,7 @@ name = "pyobjc-framework-gamekit"
 version = "8.1"
 description = "Wrappers for the framework GameKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2295,7 +2372,7 @@ name = "pyobjc-framework-gameplaykit"
 version = "8.1"
 description = "Wrappers for the framework GameplayKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2308,7 +2385,7 @@ name = "pyobjc-framework-imagecapturecore"
 version = "8.1"
 description = "Wrappers for the framework ImageCaptureCore on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2320,7 +2397,7 @@ name = "pyobjc-framework-imserviceplugin"
 version = "8.1"
 description = "Wrappers for the framework IMServicePlugIn on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2332,7 +2409,7 @@ name = "pyobjc-framework-inputmethodkit"
 version = "8.1"
 description = "Wrappers for the framework InputMethodKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2344,7 +2421,7 @@ name = "pyobjc-framework-installerplugins"
 version = "8.1"
 description = "Wrappers for the framework InstallerPlugins on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2356,7 +2433,7 @@ name = "pyobjc-framework-instantmessage"
 version = "8.1"
 description = "Wrappers for the framework InstantMessage on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2369,7 +2446,7 @@ name = "pyobjc-framework-intents"
 version = "8.1"
 description = "Wrappers for the framework Intents on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2381,7 +2458,7 @@ name = "pyobjc-framework-intentsui"
 version = "8.1"
 description = "Wrappers for the framework Intents on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2393,7 +2470,7 @@ name = "pyobjc-framework-iosurface"
 version = "8.1"
 description = "Wrappers for the framework IOSurface on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2405,7 +2482,7 @@ name = "pyobjc-framework-ituneslibrary"
 version = "8.1"
 description = "Wrappers for the framework iTunesLibrary on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2417,7 +2494,7 @@ name = "pyobjc-framework-kernelmanagement"
 version = "8.1"
 description = "Wrappers for the framework KernelManagement on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2429,7 +2506,7 @@ name = "pyobjc-framework-latentsemanticmapping"
 version = "8.1"
 description = "Wrappers for the framework LatentSemanticMapping on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2441,7 +2518,7 @@ name = "pyobjc-framework-launchservices"
 version = "8.1"
 description = "Wrappers for the framework LaunchServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2453,7 +2530,7 @@ name = "pyobjc-framework-libdispatch"
 version = "8.1"
 description = "Wrappers for libdispatch on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2464,7 +2541,7 @@ name = "pyobjc-framework-linkpresentation"
 version = "8.1"
 description = "Wrappers for the framework LinkPresentation on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2477,7 +2554,7 @@ name = "pyobjc-framework-localauthentication"
 version = "8.1"
 description = "Wrappers for the framework LocalAuthentication on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2490,7 +2567,7 @@ name = "pyobjc-framework-localauthenticationembeddedui"
 version = "8.1"
 description = "Wrappers for the framework LocalAuthenticationEmbeddedUI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2503,7 +2580,7 @@ name = "pyobjc-framework-mailkit"
 version = "8.1"
 description = "Wrappers for the framework MailKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2515,7 +2592,7 @@ name = "pyobjc-framework-mapkit"
 version = "8.1"
 description = "Wrappers for the framework MapKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2529,7 +2606,7 @@ name = "pyobjc-framework-mediaaccessibility"
 version = "8.1"
 description = "Wrappers for the framework MediaAccessibility on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2541,7 +2618,7 @@ name = "pyobjc-framework-medialibrary"
 version = "8.1"
 description = "Wrappers for the framework MediaLibrary on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2554,7 +2631,7 @@ name = "pyobjc-framework-mediaplayer"
 version = "8.1"
 description = "Wrappers for the framework MediaPlayer on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2566,7 +2643,7 @@ name = "pyobjc-framework-mediatoolbox"
 version = "8.1"
 description = "Wrappers for the framework MediaToolbox on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2578,7 +2655,7 @@ name = "pyobjc-framework-message"
 version = "8.1"
 description = "Wrappers for the framework Message on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2590,7 +2667,7 @@ name = "pyobjc-framework-metal"
 version = "8.1"
 description = "Wrappers for the framework Metal on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2602,7 +2679,7 @@ name = "pyobjc-framework-metalkit"
 version = "8.1"
 description = "Wrappers for the framework MetalKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2615,7 +2692,7 @@ name = "pyobjc-framework-metalperformanceshaders"
 version = "8.1"
 description = "Wrappers for the framework MetalPerformanceShaders on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2627,7 +2704,7 @@ name = "pyobjc-framework-metalperformanceshadersgraph"
 version = "8.1"
 description = "Wrappers for the framework MetalPerformanceShadersGraph on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2639,7 +2716,7 @@ name = "pyobjc-framework-metrickit"
 version = "8.1"
 description = "Wrappers for the framework MetricKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2651,7 +2728,7 @@ name = "pyobjc-framework-mlcompute"
 version = "8.1"
 description = "Wrappers for the framework MLCompute on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2663,7 +2740,7 @@ name = "pyobjc-framework-modelio"
 version = "8.1"
 description = "Wrappers for the framework ModelIO on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2676,7 +2753,7 @@ name = "pyobjc-framework-multipeerconnectivity"
 version = "8.1"
 description = "Wrappers for the framework MultipeerConnectivity on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2688,7 +2765,7 @@ name = "pyobjc-framework-naturallanguage"
 version = "8.1"
 description = "Wrappers for the framework NaturalLanguage on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2700,7 +2777,7 @@ name = "pyobjc-framework-netfs"
 version = "8.1"
 description = "Wrappers for the framework NetFS on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2712,7 +2789,7 @@ name = "pyobjc-framework-network"
 version = "8.1"
 description = "Wrappers for the framework Network on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2724,7 +2801,7 @@ name = "pyobjc-framework-networkextension"
 version = "8.1"
 description = "Wrappers for the framework NetworkExtension on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2736,7 +2813,7 @@ name = "pyobjc-framework-notificationcenter"
 version = "8.1"
 description = "Wrappers for the framework NotificationCenter on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2748,7 +2825,7 @@ name = "pyobjc-framework-opendirectory"
 version = "8.1"
 description = "Wrappers for the framework OpenDirectory on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2760,7 +2837,7 @@ name = "pyobjc-framework-osakit"
 version = "8.1"
 description = "Wrappers for the framework OSAKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2772,7 +2849,7 @@ name = "pyobjc-framework-oslog"
 version = "8.1"
 description = "Wrappers for the framework OSLog on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2786,7 +2863,7 @@ name = "pyobjc-framework-passkit"
 version = "8.1"
 description = "Wrappers for the framework PassKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2798,7 +2875,7 @@ name = "pyobjc-framework-pencilkit"
 version = "8.1"
 description = "Wrappers for the framework PencilKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2810,7 +2887,7 @@ name = "pyobjc-framework-photos"
 version = "8.1"
 description = "Wrappers for the framework Photos on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2822,7 +2899,7 @@ name = "pyobjc-framework-photosui"
 version = "8.1"
 description = "Wrappers for the framework PhotosUI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2834,7 +2911,7 @@ name = "pyobjc-framework-preferencepanes"
 version = "8.1"
 description = "Wrappers for the framework PreferencePanes on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2846,7 +2923,7 @@ name = "pyobjc-framework-pubsub"
 version = "8.1"
 description = "Wrappers for the framework PubSub on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2858,7 +2935,7 @@ name = "pyobjc-framework-pushkit"
 version = "8.1"
 description = "Wrappers for the framework PushKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2870,7 +2947,7 @@ name = "pyobjc-framework-quartz"
 version = "8.1"
 description = "Wrappers for the Quartz frameworks on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2882,7 +2959,7 @@ name = "pyobjc-framework-quicklookthumbnailing"
 version = "8.1"
 description = "Wrappers for the framework QuickLookThumbnailing on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2895,7 +2972,7 @@ name = "pyobjc-framework-replaykit"
 version = "8.1"
 description = "Wrappers for the framework ReplayKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2907,7 +2984,7 @@ name = "pyobjc-framework-safariservices"
 version = "8.1"
 description = "Wrappers for the framework SafariServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2919,7 +2996,7 @@ name = "pyobjc-framework-scenekit"
 version = "8.1"
 description = "Wrappers for the framework SceneKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2932,7 +3009,7 @@ name = "pyobjc-framework-screensaver"
 version = "8.1"
 description = "Wrappers for the framework ScreenSaver on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2944,7 +3021,7 @@ name = "pyobjc-framework-screentime"
 version = "8.1"
 description = "Wrappers for the framework ScreenTime on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2956,7 +3033,7 @@ name = "pyobjc-framework-scriptingbridge"
 version = "8.1"
 description = "Wrappers for the framework ScriptingBridge on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2968,7 +3045,7 @@ name = "pyobjc-framework-searchkit"
 version = "8.1"
 description = "Wrappers for the framework SearchKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2980,7 +3057,7 @@ name = "pyobjc-framework-security"
 version = "8.1"
 description = "Wrappers for the framework Security on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2992,7 +3069,7 @@ name = "pyobjc-framework-securityfoundation"
 version = "8.1"
 description = "Wrappers for the framework SecurityFoundation on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3005,7 +3082,7 @@ name = "pyobjc-framework-securityinterface"
 version = "8.1"
 description = "Wrappers for the framework SecurityInterface on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3018,7 +3095,7 @@ name = "pyobjc-framework-servernotification"
 version = "8.1"
 description = "Wrappers for the framework ServerNotification on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3030,7 +3107,7 @@ name = "pyobjc-framework-servicemanagement"
 version = "8.1"
 description = "Wrappers for the framework ServiceManagement on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3042,7 +3119,7 @@ name = "pyobjc-framework-shazamkit"
 version = "8.1"
 description = "Wrappers for the framework ShazamKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3054,7 +3131,7 @@ name = "pyobjc-framework-social"
 version = "8.1"
 description = "Wrappers for the framework Social on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3066,7 +3143,7 @@ name = "pyobjc-framework-soundanalysis"
 version = "8.1"
 description = "Wrappers for the framework SoundAnalysis on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3078,7 +3155,7 @@ name = "pyobjc-framework-speech"
 version = "8.1"
 description = "Wrappers for the framework Speech on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3090,7 +3167,7 @@ name = "pyobjc-framework-spritekit"
 version = "8.1"
 description = "Wrappers for the framework SpriteKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3103,7 +3180,7 @@ name = "pyobjc-framework-storekit"
 version = "8.1"
 description = "Wrappers for the framework StoreKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3115,7 +3192,7 @@ name = "pyobjc-framework-syncservices"
 version = "8.1"
 description = "Wrappers for the framework SyncServices on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3128,7 +3205,7 @@ name = "pyobjc-framework-systemconfiguration"
 version = "8.1"
 description = "Wrappers for the framework SystemConfiguration on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3140,7 +3217,7 @@ name = "pyobjc-framework-systemextensions"
 version = "8.1"
 description = "Wrappers for the framework SystemExtensions on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3152,7 +3229,7 @@ name = "pyobjc-framework-uniformtypeidentifiers"
 version = "8.1"
 description = "Wrappers for the framework UniformTypeIdentifiers on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3164,7 +3241,7 @@ name = "pyobjc-framework-usernotifications"
 version = "8.1"
 description = "Wrappers for the framework UserNotifications on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3176,7 +3253,7 @@ name = "pyobjc-framework-usernotificationsui"
 version = "8.1"
 description = "Wrappers for the framework UserNotificationsUI on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3189,7 +3266,7 @@ name = "pyobjc-framework-videosubscriberaccount"
 version = "8.1"
 description = "Wrappers for the framework VideoSubscriberAccount on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3201,7 +3278,7 @@ name = "pyobjc-framework-videotoolbox"
 version = "8.1"
 description = "Wrappers for the framework VideoToolbox on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3215,7 +3292,7 @@ name = "pyobjc-framework-virtualization"
 version = "8.1"
 description = "Wrappers for the framework Virtualization on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3227,7 +3304,7 @@ name = "pyobjc-framework-vision"
 version = "8.1"
 description = "Wrappers for the framework Vision on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3241,7 +3318,7 @@ name = "pyobjc-framework-webkit"
 version = "8.1"
 description = "Wrappers for the framework WebKit on macOS"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3264,7 +3341,7 @@ name = "pyqt5"
 version = "5.12.3"
 description = "Python bindings for the Qt cross platform UI and application toolkit"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3275,7 +3352,7 @@ name = "pyqt5-sip"
 version = "12.9.0"
 description = "The sip module support for PyQt5"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -3283,7 +3360,7 @@ name = "pyqtwebengine"
 version = "5.12.1"
 description = "Python bindings for the Qt WebEngine framework"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3294,7 +3371,7 @@ name = "pyrsistent"
 version = "0.18.0"
 description = "Persistent/Functional/Immutable data structures"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [[package]]
@@ -3313,7 +3390,7 @@ name = "python-lsp-black"
 version = "1.0.1"
 description = "Black plugin for the Python LSP Server"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3329,7 +3406,7 @@ name = "python-lsp-jsonrpc"
 version = "1.0.0"
 description = "JSON RPC 2.0 server library"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3343,7 +3420,7 @@ name = "python-lsp-server"
 version = "1.2.4"
 description = "Python Language Server for the Language Server Protocol"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3379,7 +3456,7 @@ name = "python-slugify"
 version = "5.0.2"
 description = "A Python Slugify application that handles Unicode"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3401,7 +3478,7 @@ name = "pywin32"
 version = "302"
 description = "Python for Window Extensions"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3409,7 +3486,7 @@ name = "pywin32-ctypes"
 version = "0.2.0"
 description = ""
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3417,7 +3494,7 @@ name = "pyxdg"
 version = "0.27"
 description = "PyXDG contains implementations of freedesktop.org standards in python."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3433,7 +3510,7 @@ name = "pyzmq"
 version = "22.3.0"
 description = "Python bindings for 0MQ"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3445,7 +3522,7 @@ name = "qdarkstyle"
 version = "3.0.2"
 description = "The most complete dark/light style sheet for C++/Python and Qt applications"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3461,7 +3538,7 @@ name = "qstylizer"
 version = "0.2.1"
 description = "Stylesheet Generator for PyQt{4-5}/PySide{1-2}"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3477,7 +3554,7 @@ name = "qtawesome"
 version = "1.1.1"
 description = "FontAwesome icons in PyQt and PySide applications"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3488,7 +3565,7 @@ name = "qtconsole"
 version = "5.2.1"
 description = "Jupyter Qt console"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">= 3.6"
 
 [package.dependencies]
@@ -3510,7 +3587,7 @@ name = "qtpy"
 version = "1.11.3"
 description = "Provides an abstraction layer on top of the various Qt bindings (PyQt5, PyQt4 and PySide) and additional custom QWidgets."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
 
 [[package]]
@@ -3551,7 +3628,7 @@ name = "rope"
 version = "0.22.0"
 description = "a python refactoring library..."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.extras]
@@ -3573,7 +3650,7 @@ name = "rtree"
 version = "0.9.7"
 description = "R-Tree spatial index for Python GIS"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3581,7 +3658,7 @@ name = "secretstorage"
 version = "3.3.1"
 description = "Python bindings to FreeDesktop.org Secret Service API"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3661,7 +3738,7 @@ name = "snowballstemmer"
 version = "2.2.0"
 description = "This package provides 29 stemmers for 28 languages generated from Snowball algorithms."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3669,7 +3746,7 @@ name = "sortedcontainers"
 version = "2.4.0"
 description = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3677,7 +3754,7 @@ name = "sphinx"
 version = "4.3.1"
 description = "Python documentation generator"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3708,7 +3785,7 @@ name = "sphinxcontrib-applehelp"
 version = "1.0.2"
 description = "sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -3720,7 +3797,7 @@ name = "sphinxcontrib-devhelp"
 version = "1.0.2"
 description = "sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -3732,7 +3809,7 @@ name = "sphinxcontrib-htmlhelp"
 version = "2.0.0"
 description = "sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -3744,7 +3821,7 @@ name = "sphinxcontrib-jsmath"
 version = "1.0.1"
 description = "A sphinx extension which renders display math in HTML via JavaScript"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -3755,7 +3832,7 @@ name = "sphinxcontrib-qthelp"
 version = "1.0.3"
 description = "sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -3767,7 +3844,7 @@ name = "sphinxcontrib-serializinghtml"
 version = "1.1.5"
 description = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -3779,7 +3856,7 @@ name = "spyder"
 version = "5.1.5"
 description = "The Scientific Python Development Environment"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3830,7 +3907,7 @@ name = "spyder-kernels"
 version = "2.1.3"
 description = "Jupyter kernels for Spyder's console"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3915,7 +3992,7 @@ name = "testpath"
 version = "0.5.0"
 description = "Test utilities for code working with files and commands"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">= 3.5"
 
 [package.extras]
@@ -3926,7 +4003,7 @@ name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -3934,7 +4011,7 @@ name = "textdistance"
 version = "4.2.2"
 description = "Compute distance between the two texts."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -3956,7 +4033,7 @@ name = "three-merge"
 version = "0.1.1"
 description = "Simple library for merging two strings with respect to a base one"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -3970,7 +4047,7 @@ name = "tinycss2"
 version = "1.1.1"
 description = "A tiny CSS parser"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -3985,7 +4062,7 @@ name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
@@ -4012,7 +4089,7 @@ name = "tornado"
 version = "6.1"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">= 3.5"
 
 [[package]]
@@ -4036,7 +4113,7 @@ name = "traitlets"
 version = "5.1.1"
 description = "Traitlets Python configuration system"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.extras]
@@ -4047,7 +4124,7 @@ name = "typed-ast"
 version = "1.4.3"
 description = "a fork of Python 2 and 3 ast modules with type comment support"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -4063,7 +4140,7 @@ name = "ujson"
 version = "4.3.0"
 description = "Ultra fast JSON encoder and decoder for Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [[package]]
@@ -4118,7 +4195,7 @@ name = "watchdog"
 version = "2.1.6"
 description = "Filesystem events monitoring"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -4129,7 +4206,7 @@ name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -4137,7 +4214,7 @@ name = "webencodings"
 version = "0.5.1"
 description = "Character encoding aliases for legacy web content"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -4156,7 +4233,7 @@ name = "wrapt"
 version = "1.12.1"
 description = "Module for decorators, wrappers and monkey patching."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -4164,7 +4241,7 @@ name = "wurlitzer"
 version = "3.0.2"
 description = "Capture C-level output in context managers"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -4172,7 +4249,7 @@ name = "yapf"
 version = "0.31.0"
 description = "A formatter for Python code."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -4189,12 +4266,14 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 
 [extras]
 atari = ["ale-py", "AutoROM"]
+mujoco = ["free-mujoco-py"]
 pybullet = ["pybullet"]
+spyder = []
 
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7.1,<3.10"
-content-hash = "bd8ac17d5dc5eedc5ef721dc573a79c6b5175b5e57a26f914128ebda75ffdd1a"
+content-hash = "89a2d7117a4b07cb2444ef8cc527ce4be0a8915244554ca484928ee9c0c92519"
 
 [metadata.files]
 absl-py = [
@@ -4416,6 +4495,44 @@ cycler = [
     {file = "cycler-0.11.0-py3-none-any.whl", hash = "sha256:3a27e95f763a428a739d2add979fa7494c912a32c17c4c38c4d5f082cad165a3"},
     {file = "cycler-0.11.0.tar.gz", hash = "sha256:9c87405839a19696e837b3b818fed3f5f69f16f1eec1a1ad77e043dcea9c772f"},
 ]
+cython = [
+    {file = "Cython-0.29.25-cp27-cp27m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:08a502fe08756070276d841c830cfc37254a2383d0a5bea736ffb78eff613c88"},
+    {file = "Cython-0.29.25-cp27-cp27m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:c204cb2d005a426c5c83309fd7edea335ff5c514ffa6dc72ddac92cfde170b69"},
+    {file = "Cython-0.29.25-cp27-cp27mu-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:3913f6a50409ab36a5b8edbb4c3e4d441027f43150d8335e5118d34ef04c745c"},
+    {file = "Cython-0.29.25-cp27-cp27mu-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:44cc749f288423182504a8fc8734070a369bf576734b9f0fafff40cd6b6e1b3e"},
+    {file = "Cython-0.29.25-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:4f7b135cba0d2509890e1dcff2005585bc3d51c9f17564b70d8bc82dc7ec3a5e"},
+    {file = "Cython-0.29.25-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:eb64ec369eba2207fbe618650d78d9af0455e0c1abb301ec024fa9f3e17a15cc"},
+    {file = "Cython-0.29.25-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:6efb798993260532879f683dc8ce9e30fd1ec86f02c926f1238a8e6a64576321"},
+    {file = "Cython-0.29.25-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:b8fc9c78262b140364ce1b28ac40ff505a47ac3fd4f86311d461df04a28b3f23"},
+    {file = "Cython-0.29.25-cp35-cp35m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:3497e366ffed67454162d31bf4bd2ac3aa183dfac089eb4124966c9f98bd9c05"},
+    {file = "Cython-0.29.25-cp35-cp35m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:b5b3e876e617fe2cf466d02198b76924dcda3cc162a1043226a9c181b9a662a6"},
+    {file = "Cython-0.29.25-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:aa9e1fe5ee0a4f9d2430c1e0665f40b48f4b511150ca02f69e9bb49dc48d4e0e"},
+    {file = "Cython-0.29.25-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:8726456c7e376410b3c631427da0a4affe1e481424436d1e3f1888cc3c0f8d2e"},
+    {file = "Cython-0.29.25-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:191978e5839ca425eb78f0f60a84ad5db7a07b97e8076f9853d0d12c3ccec5d4"},
+    {file = "Cython-0.29.25-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a206a1f8ea11314e02dc01bf24f397b8f1b413bbcc0e031396caa1a126b060c2"},
+    {file = "Cython-0.29.25-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:e6fa0a7cec9461c5ca687f3c4bb59cf2565afb76c60303b2dc8b280c6e112810"},
+    {file = "Cython-0.29.25-cp36-cp36m-musllinux_1_1_x86_64.whl", hash = "sha256:f95433e6963164de372fc1ef01574d7419d96ce45274f296299267d874b90800"},
+    {file = "Cython-0.29.25-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:4dc3d230849d61844e6b5737ee624c896f51e98c8a5d13f965b02a7e735230be"},
+    {file = "Cython-0.29.25-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:3379e67113e92fef490a88eca685b07b711bb4db1ddce66af9e460673a5335cc"},
+    {file = "Cython-0.29.25-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:0e9e28eb6bb19f5e25f4bf5c8f8ea7db3bc4910309fab2305e5c9c5a5223db77"},
+    {file = "Cython-0.29.25-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:79d2f84a6d87d45ef580c0441b5394c4f29344e05126a8e2fb4ba4144425f3b0"},
+    {file = "Cython-0.29.25-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:6759b73a9a1013cbdac71ebefa284aa50617b5b32957a54eedaa22ac2f6d48de"},
+    {file = "Cython-0.29.25-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:07d5b8ce032110822dad2eb09950a98b9e255d14c2daf094be32d663790b3365"},
+    {file = "Cython-0.29.25-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:5d0d97a5f661dccf2f9e14cf27fe9027f772d089fb92fdd3dd8a584d9b8a2916"},
+    {file = "Cython-0.29.25-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:7b3f6e4cfcc103bccdcbc666f613d669ac378c8918629296cdf8191c0c2ec418"},
+    {file = "Cython-0.29.25-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:e96857ab2dbd8a67852341001f1f2a1ef3f1939d82aea1337497a8f76a9d7f6c"},
+    {file = "Cython-0.29.25-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:4ee99fab5191f403f33774fc92123291c002947338c2628b1ed42ed0017149dd"},
+    {file = "Cython-0.29.25-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:d288f25e8abb43b1cfa2fe3d69b2d6236cca3ff6163d090e26c4b1e8ea80dfbf"},
+    {file = "Cython-0.29.25-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:1c2f262f7d032ec0106534982609ae0148f86ba52fc747df64e645706af20926"},
+    {file = "Cython-0.29.25-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:decd641167e97a3c1f973bf0bbb560d251809f6db8168c10edf94c0a1e5dec65"},
+    {file = "Cython-0.29.25-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:800cbe944886320e4a4b623becb97960ae9d7d80f2d12980b83bcfb63ff47d5b"},
+    {file = "Cython-0.29.25-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_24_i686.whl", hash = "sha256:3e94eb973f99c1963973a46dbd9e3974a03b8fe0af3de02dc5d65b4c6a6f9b3f"},
+    {file = "Cython-0.29.25-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:64394ec94d9a0e5002f77e67ee8ceed97f25b483b18ea6aab547f4d82ca32ef6"},
+    {file = "Cython-0.29.25-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:b6f397256cfab2d0f0af42659fca3232c23f5a570b6c21ed66aaac22dd95da15"},
+    {file = "Cython-0.29.25-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:1825d6f2160188dfe1faa0099d30ed0e5ae56826627bf0de6dcb8dcbcf64c9bd"},
+    {file = "Cython-0.29.25-py2.py3-none-any.whl", hash = "sha256:0cf7c3033349d10c5eb33ded1a78974f680e95c245a585c18a2046c67f8ed461"},
+    {file = "Cython-0.29.25.tar.gz", hash = "sha256:a87cbe3756e7c464acf3e9420d8741e62d3b2eace0846cb39f664ad378aab284"},
+]
 debugpy = [
     {file = "debugpy-1.5.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:70b422c63a833630c33e3f9cdbd9b6971f8c5afd452697e464339a21bbe862ba"},
     {file = "debugpy-1.5.1-cp310-cp310-win32.whl", hash = "sha256:3a457ad9c0059a21a6c7d563c1f18e924f5cf90278c722bd50ede6f56b77c7fe"},
@@ -4463,6 +4580,10 @@ entrypoints = [
     {file = "entrypoints-0.3-py2.py3-none-any.whl", hash = "sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19"},
     {file = "entrypoints-0.3.tar.gz", hash = "sha256:c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"},
 ]
+fasteners = [
+    {file = "fasteners-0.15-py2.py3-none-any.whl", hash = "sha256:007e4d2b2d4a10093f67e932e5166722d2eab83b77724156e92ad013c6226574"},
+    {file = "fasteners-0.15.tar.gz", hash = "sha256:3a176da6b70df9bb88498e1a18a9e4a8579ed5b9141207762368a1017bf8f5ef"},
+]
 flake8 = [
     {file = "flake8-3.9.2-py2.py3-none-any.whl", hash = "sha256:bf8fd333346d844f616e8d47905ef3a3384edae6b4e9beb0c5101e25e3110907"},
     {file = "flake8-3.9.2.tar.gz", hash = "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b"},
@@ -4471,6 +4592,10 @@ fonttools = [
     {file = "fonttools-4.28.3-py3-none-any.whl", hash = "sha256:ca6ecc67e5a5620d31754f92147f22f48fd5461fd3fafe6afe031aa9ee079b0f"},
     {file = "fonttools-4.28.3.zip", hash = "sha256:edb48922873d3fda489ab400bd40888ac239ae8070b53f494b839bcdff0d01f6"},
 ]
+free-mujoco-py = [
+    {file = "free-mujoco-py-2.1.6.tar.gz", hash = "sha256:77e18302e21979bbd77a7c1584070815843cab1b1249f8a17667e15aba528a9a"},
+    {file = "free_mujoco_py-2.1.6-py3-none-any.whl", hash = "sha256:f541d84b6bd87919ccf28f5a708681ca90560a945d104aca393d89275790efb8"},
+]
 gitdb = [
     {file = "gitdb-4.0.9-py3-none-any.whl", hash = "sha256:8033ad4e853066ba6ca92050b9df2f89301b8fc8bf7e9324d412a63f8bf1a8fd"},
     {file = "gitdb-4.0.9.tar.gz", hash = "sha256:bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"},
@@ -4478,6 +4603,15 @@ gitdb = [
 gitpython = [
     {file = "GitPython-3.1.24-py3-none-any.whl", hash = "sha256:dc0a7f2f697657acc8d7f89033e8b1ea94dd90356b2983bca89dc8d2ab3cc647"},
     {file = "GitPython-3.1.24.tar.gz", hash = "sha256:df83fdf5e684fef7c6ee2c02fc68a5ceb7e7e759d08b694088d0cacb4eba59e5"},
+]
+glfw = [
+    {file = "glfw-1.12.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-macosx_10_6_intel.whl", hash = "sha256:88bd1cd2ace036d275e9af8312993068d94b3ac19248421eedc35a4baf53bb8c"},
+    {file = "glfw-1.12.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2010_i686.whl", hash = "sha256:bb63f6121c40f5f17cd78328c040b40aeaca9ed748f440c40d2fcad824107a74"},
+    {file = "glfw-1.12.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2010_x86_64.whl", hash = "sha256:6324fed2c4fd1762ae580277c534b5dab6f360b8fb9aed3e1547cf33f63d207c"},
+    {file = "glfw-1.12.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-manylinux2014_x86_64.whl", hash = "sha256:20c918a1ae413a009f7559be9559bc2ec1d6251888f588ffa7a174d6db69a942"},
+    {file = "glfw-1.12.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-win32.whl", hash = "sha256:fe9622a48ec9dc436e67de0d0bb4c9443996b5bd5564df1734d3a4280b728d38"},
+    {file = "glfw-1.12.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38-none-win_amd64.whl", hash = "sha256:3723db5e5628b2cd8729421fb6fc5fed3e5d25c7d1631f72f13301b218ee1600"},
+    {file = "glfw-1.12.0.tar.gz", hash = "sha256:f195ed7a43475e4f1603903d6999f3a6b470fda88bd1749ff10adc520abe8fb1"},
 ]
 google-auth = [
     {file = "google-auth-2.3.3.tar.gz", hash = "sha256:d83570a664c10b97a1dc6f8df87e5fdfff012f48f62be131e449c20dfc32630e"},
@@ -4539,6 +4673,10 @@ gym = [
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
+]
+imageio = [
+    {file = "imageio-2.13.3-py3-none-any.whl", hash = "sha256:126f10aa970f54b657bcc52f6481a2e55137fcc0f978bb6e0451bd1e22c54f17"},
+    {file = "imageio-2.13.3.tar.gz", hash = "sha256:bb87b272e1e9b05d242e11f8d88d030aefa68ca95daf3accc986d0b782ae3cd5"},
 ]
 imagesize = [
     {file = "imagesize-1.3.0-py2.py3-none-any.whl", hash = "sha256:1db2f82529e53c3e929e8926a1fa9235aa82d0bd0c580359c67ec31b2fddaa8c"},
@@ -4770,6 +4908,10 @@ mistune = [
     {file = "mistune-0.8.4-py2.py3-none-any.whl", hash = "sha256:88a1051873018da288eee8538d476dffe1262495144b33ecb586c4ab266bb8d4"},
     {file = "mistune-0.8.4.tar.gz", hash = "sha256:59a3429db53c50b5c6bcc8a07f8848cb00d7dc8bdb431a4ab41920d201d4756e"},
 ]
+monotonic = [
+    {file = "monotonic-1.6-py2.py3-none-any.whl", hash = "sha256:68687e19a14f11f26d140dd5c86f3dba4bf5df58003000ed467e0e2a69bca96c"},
+    {file = "monotonic-1.6.tar.gz", hash = "sha256:3a55207bcfed53ddd5c5bae174524062935efed17792e9de2ad0205ce9ad63f7"},
+]
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
@@ -4975,8 +5117,8 @@ promise = [
     {file = "promise-2.3.tar.gz", hash = "sha256:dfd18337c523ba4b6a58801c164c1904a9d4d1b1747c7d5dbf45b693a49d93d0"},
 ]
 prompt-toolkit = [
-    {file = "prompt_toolkit-3.0.23-py3-none-any.whl", hash = "sha256:5f29d62cb7a0ecacfa3d8ceea05a63cd22500543472d64298fc06ddda906b25d"},
-    {file = "prompt_toolkit-3.0.23.tar.gz", hash = "sha256:7053aba00895473cb357819358ef33f11aa97e4ac83d38efb123e5649ceeecaf"},
+    {file = "prompt_toolkit-3.0.24-py3-none-any.whl", hash = "sha256:e56f2ff799bacecd3e88165b1e2f5ebf9bcd59e80e06d395fa0cc4b8bd7bb506"},
+    {file = "prompt_toolkit-3.0.24.tar.gz", hash = "sha256:1bb05628c7d87b645974a1bad3f17612be0c29fa39af9f7688030163f680bad6"},
 ]
 protobuf = [
     {file = "protobuf-3.19.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:d80f80eb175bf5f1169139c2e0c5ada98b1c098e2b3c3736667f28cbbea39fc8"},

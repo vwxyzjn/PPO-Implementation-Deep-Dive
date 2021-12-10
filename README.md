@@ -66,3 +66,21 @@ Train agents with experiment tracking:
 ```
 poetry run python ppo_continuous_action.py --track --capture-video
 ```
+
+### MuJoCo
+
+!! Note this installation method only works in Linux
+
+Install dependencies:
+```
+poetry install -E mujoco
+poetry run python -c "import mujoco_py"
+```
+Train agents:
+```
+poetry run python ppo_continuous_action.py --gym-id Hopper-v2
+```
+Train agents with experiment tracking:
+```
+poetry run python ppo_continuous_action.py --gym-id Hopper-v2 --track --capture-video
+```
