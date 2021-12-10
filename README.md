@@ -66,3 +66,27 @@ Train agents with experiment tracking:
 ```
 poetry run python ppo_continuous_action.py --track --capture-video
 ```
+
+
+### Gym-microrts (MultiDiscrete)
+
+Install dependencies:
+```
+poetry install -E gym-microrts
+```
+Train agents:
+```
+poetry run python ppo_multidiscrete.py
+```
+Train agents with experiment tracking:
+```
+poetry run python ppo_multidiscrete.py --track --capture-video
+```
+Train agents with invalid action masking:
+```
+poetry run python ppo_multidiscrete_mask.py
+```
+Train agents with invalid action masking and experiment tracking:
+```
+poetry run python ppo_multidiscrete_mask.py --track --capture-video
+```
