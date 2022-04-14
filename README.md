@@ -1,4 +1,8 @@
-# PPO-Implementation-Deep-Dive
+# Deprecation Notice
+
+This repo is deprecated - please visit our new repo https://github.com/vwxyzjn/ppo-implementation-details and the improved ICLR 2022 blog post on PPO https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/
+
+## PPO-Implementation-Deep-Dive
 
 This repo contains the source code for the PPO Implementation Deep Dive tutorial series. 
 
